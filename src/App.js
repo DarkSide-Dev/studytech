@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+import {
+
+  BrowserRouter, // Mostra o conteúdo
+  Switch, // Define o conteúdo a ser mostrado
+  Route, // Define o nome da rota
+  Link // Direciona você para outra rota
+
+} from 'react-router-dom'; // Biblioteca de rotas
+
+import Apresentation from './assets/screens/Apresentation';
+
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <BrowserRouter>
+    
+      <Switch>
+
+        <Route path='/' exact>
+          
+          <Apresentation />
+
+        </Route>
+
+      </Switch>
+
+    </BrowserRouter>
+
   );
+
 }
 
 export default App;
