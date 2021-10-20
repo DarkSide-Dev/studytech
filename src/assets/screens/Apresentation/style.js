@@ -9,6 +9,8 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     position: fixed;
+    border-bottom: 2px solid #0553f1;
+    padding: 5px 0;
 `;
 
 export const Title = styled.h2`
