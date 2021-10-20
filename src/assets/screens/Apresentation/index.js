@@ -129,7 +129,7 @@ function Apresentation(){
                 <SectionAreaColumn>
 
                     <SectionTitle>
-                        Por que aderir tecnologia à sua empresa
+                        Motivos para aderir tecnologia à sua empresa
                     </SectionTitle>
                 
                 </SectionAreaColumn>

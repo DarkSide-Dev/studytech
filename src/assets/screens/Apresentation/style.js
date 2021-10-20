@@ -86,6 +86,7 @@ export const Message = styled.p`
     margin: 0;
     color: #7fbbf2;
     padding-left: 10px;
+    font-weight: bold;
 `;
 
 export const TextArea = styled.div`
