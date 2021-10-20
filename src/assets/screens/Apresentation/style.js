@@ -161,6 +161,17 @@ export const SectionSubtitle = styled.h3`
     margin: 0;
 `;
 
+export const SectionButton = styled.button`
+    color: #fff;
+    background-color: #0d378c;
+    font-size: 30px;
+    border-radius: 5px;
+    width: 20rem;
+    border: 2px solid transparent;
+    margin: 20px 0 0 0;
+    cursor: pointer;
+`;
+
 export const SectionTitle = styled.h3`
     font-weight: bold;
     color: #d9d9d9;
