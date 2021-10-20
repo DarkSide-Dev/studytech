@@ -33,7 +33,7 @@ export const OutlineButton = styled.button`
     font-size: 20px;
     border: 2px solid #38b6ff;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 30px;
     margin: 0 30px;
     cursor: pointer;
 
@@ -48,7 +48,7 @@ export const SolidButton = styled.button`
     font-size: 20px;
     border: 2px solid #38b6ff;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 30px;
     cursor: pointer;
 
     :nth-child(1){
