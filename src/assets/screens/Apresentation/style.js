@@ -36,9 +36,14 @@ export const OutlineButton = styled.button`
     padding: 5px 30px;
     margin: 0 30px;
     cursor: pointer;
+    transition: all ease .3s;
 
     :nth-child(2){
         font-size: 25px;
+    }
+
+    :hover{
+        border-color: #ff6e18;
     }
 `;
 
@@ -63,7 +68,7 @@ export const Main = styled.main`
     background-color: #0d378c;
     display: flex;
     padding-top: 70px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #0d378c;
 `;
 
 export const MainTextArea = styled.div`
@@ -121,13 +126,13 @@ export const MainImgArea = styled.div`
 `;
 
 export const Section = styled.section`
-    background-color: #0554f2;
+    background-color: #ccddff;
     display: flex;
     min-width: 100vw;
     max-width: 100vw;
     padding: 30px 30px 45px 50px;
     box-sizing: border-box;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #0d378c;
     
     :last-child{
         flex-direction: column;
@@ -155,15 +160,15 @@ export const SectionAreaColumn = styled.div`
 `;
 
 export const SectionSubtitle = styled.h3`
-    color: #d9d9d9;
-    font-weight: normal;
-    font-size: 50px;
+    color: #152126;
+    font-weight: bold;
+    font-size: 45px;
     margin: 0;
 `;
 
 export const SectionTitle = styled.h3`
     font-weight: bold;
-    color: #d9d9d9;
+    color: #152126;
     font-size: 40px;
     margin: 0;
     text-align: center;
@@ -171,7 +176,7 @@ export const SectionTitle = styled.h3`
 
 export const SectionDesc = styled.p`
     font-size: 35px;
-    color: #d9d9d9;
+    color: #152126;
     margin: 0;
     font-size: 25px;
     padding-top: 20px;
@@ -194,7 +199,6 @@ export const ArticleArea = styled.div`
 
 export const Article = styled.article`
     border-radius: 10px;
-    border: 10px double #0d378c;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -203,10 +207,9 @@ export const Article = styled.article`
     width: 300px;
     background-color: #a0bbf2;
     transition: box-shadow .3s ease-in-out;
-
-    :hover{
-        box-shadow: 0 0 30px #d9d9d9;
-    }
+    border: 5px solid #fffef5;
+    box-shadow: 0 0 30px #16e2fd;
+    margin-bottom: 30px;
 `;
 
 export const ArticleTitle = styled.h3`
