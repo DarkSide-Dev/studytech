@@ -39,10 +39,15 @@ export const AreaLoginButton = styled.button`
     }
 `;
 
-export const UserImg = styled.img`
-    height: 100%;
-    margin-left: auto;
-    margin-right: 20px;
+export const UserImg = styled.img`    
+    display: none;
+
+    @media(max-width: 400px){
+        display: block;
+        height: 100%;
+        margin-left: auto;
+        margin-right: 20px;
+    }
 `;
 
 export const Header = styled.header`
