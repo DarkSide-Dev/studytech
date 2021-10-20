@@ -8,6 +8,7 @@ export const Header = styled.header`
     height: 50px;
     display: flex;
     align-items: center;
+    position: fixed;
 `;
 
 export const Title = styled.h2`
