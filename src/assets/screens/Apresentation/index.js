@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Banner from '../../img/undraw_professor_8lrt.svg';
 import WppBussiness from '../../img/whatsapp-business-34.png';
 import Linkedin from '../../img/174857.png';
 import Trello from '../../img/kisspng-trello-logo-slack-atlassian-trello-5b2bcdc8b0e154.9936644115295973847245.png';
 import Excel from '../../img/excel-logo.png';
+
+import User from '../../img/user.png';
+import Logo from '../../img/logo.png';
 
 import {
 
@@ -34,11 +37,45 @@ import {
     Article,
     ArticleTitle,
     ArticleText,
-    ArticleArea
+    ArticleArea,
+    LogoImg,
+    UserImg,
+    AreaLogin,
+    AreaLoginButton
 
 } from './style.js';
 
 function Apresentation(){
+
+    const [widthDevice, setWidthService] = useState(window.innerWidth);
+    const [showLogin, setShowLogin] = useState(false);
+    const [showAnimation, setShowAnimation] = useState(false);
+
+    function showLoginArea(){
+
+        if(showLogin){
+
+            setShowAnimation(!showAnimation);            
+
+            setTimeout(() => {
+
+                setShowLogin(!showLogin);
+
+            }, 400);
+
+        }else{
+
+            setShowLogin(!showLogin);
+
+            setTimeout(() => {
+
+                setShowAnimation(!showAnimation);
+
+            }, 10);
+
+        }
+
+    }
 
     return(
 
@@ -46,10 +83,22 @@ function Apresentation(){
 
             <Header>
 
+                <LogoImg src={Logo} />
+
                 <Title>Study Tech</Title>
 
                 <Cadastro>Cadastre-se agora</Cadastro>
-                <OutlineButton>Entrar</OutlineButton>
+
+                <OutlineButton mostrar={widthDevice}>Entrar</OutlineButton>
+
+                <UserImg onClick={showLoginArea} src={User} />
+
+                <AreaLogin animar={showAnimation} mostrar={showLogin}>
+                
+                    <AreaLoginButton>Entrar</AreaLoginButton>
+                    <AreaLoginButton>Cadastrar</AreaLoginButton>
+
+                </AreaLogin>
                 
             </Header>
 
@@ -78,6 +127,8 @@ function Apresentation(){
 
                     </TextArea>
 
+                    <BannerImg mostrar={false} src={Banner} />
+
                     <TextArea>
 
                         <SolidButton>Ver mais</SolidButton>
@@ -91,7 +142,7 @@ function Apresentation(){
 
                 <MainImgArea>
 
-                    <BannerImg src={Banner} />
+                    <BannerImg mostrar={true} src={Banner} />
 
                 </MainImgArea>
 

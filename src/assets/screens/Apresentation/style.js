@@ -2,6 +2,49 @@ import styled from 'styled-components';
 
 export const Container = styled.div``;
 
+export const LogoImg = styled.img`
+    
+    display: none;
+
+    @media(max-width: 400px){
+        display: block;
+        box-sizing: border-box;
+        height: 100%;
+        margin-left: 15px;
+        border: 1px solid #fff;
+        border-radius: 2px;
+    }
+`;
+
+export const AreaLogin = styled.div`
+    display: ${props => props.mostrar?"flex":"none"};
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: #152126;
+    padding: 2px;
+    transition: all ease .5s;
+    height: ${props => props.animar?"55px":"0"};
+`;
+
+export const AreaLoginButton = styled.button`
+    background-color: #a6c2ff;
+    border: 0;
+    font-size: 17px;
+    border-radius: 3px;
+    
+    :first-of-type{
+        margin-bottom: 5px;
+    }
+`;
+
+export const UserImg = styled.img`
+    height: 100%;
+    margin-left: auto;
+    margin-right: 20px;
+`;
+
 export const Header = styled.header`
     background-color: #0d378c;
     width: 100vw;
@@ -19,6 +62,10 @@ export const Title = styled.h2`
     margin: 0;
     padding-left: 50px;
     font-weight: normal;
+
+    @media(max-width: 400px) {
+        display: none;
+    }
 `;
 
 export const Cadastro = styled.button`
@@ -28,6 +75,10 @@ export const Cadastro = styled.button`
     border: 0;
     margin-left: auto;
     cursor: pointer;
+
+    @media(max-width: 400px) {
+        display: none;
+    }
 `;
 
 export const OutlineButton = styled.button`
@@ -39,7 +90,9 @@ export const OutlineButton = styled.button`
     padding: 5px 30px;
     margin: 0 30px;
     cursor: pointer;
-    transition: all ease .3s;
+    transition: all ease .3s;    
+
+    display: ${props => props.mostrar <= 400?"none":"block"};
 
     :nth-child(2){
         font-size: 25px;
@@ -47,6 +100,10 @@ export const OutlineButton = styled.button`
 
     :hover{
         border-color: #ff6e18;
+    }
+
+    @media(max-width: 400px){
+        width: 200px;
     }
 `;
 
@@ -62,6 +119,11 @@ export const SolidButton = styled.button`
     :nth-child(1){
         font-size: 25px;
     }
+
+    @media(max-width: 400px){
+        width: 200px;
+        margin: 30px 0 20px 0;
+    }
 `;
 
 export const Main = styled.main`
@@ -72,6 +134,11 @@ export const Main = styled.main`
     display: flex;
     padding-top: 70px;
     border-bottom: 2px solid #0d378c;
+
+    @media(max-width: 400px){
+        flex-direction: column;
+        padding: 80px 15px 30px 15px;
+    }
 `;
 
 export const MainTextArea = styled.div`
@@ -101,6 +168,17 @@ export const TextArea = styled.div`
     display: flex;
     align-items: center;
     padding-top: 10px;
+    
+    @media(max-width: 400px){
+        
+        :nth-child(1){
+            justify-content: center;
+        }
+
+        :nth-child(5){
+            flex-direction: column;            
+        }
+    }
 `;
 
 export const TitleIntroduction = styled.h1`
@@ -109,6 +187,12 @@ export const TitleIntroduction = styled.h1`
     margin: 0;
     width: 90%;
     padding-top: 20px;
+
+    @media(max-width: 400px){
+        font-size: 35px;
+        text-align: center;
+        width: 100%;
+    }
 `;
 
 export const Description = styled.h2`
@@ -116,10 +200,22 @@ export const Description = styled.h2`
     width: 600px;
     font-weight: normal;
     font-size: 25px;
+
+    @media(max-width: 400px){
+        font-size: 20px;
+        text-align: justify;
+        width: 100%;
+    }
 `;
 
 export const BannerImg = styled.img`
     width: 80%;
+    display: ${props => props.mostrar?"block":"none"};
+    
+    @media(max-width: 400px){
+        display: ${props => props.mostrar?"none":"block"};
+        width: 100%;
+    }
 `;
 
 export const MainImgArea = styled.div`
