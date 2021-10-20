@@ -27,6 +27,7 @@ import {
     SectionArea,
     SectionSubtitle,
     SectionDesc,
+    SectionButton,
     SectionImg,
     SectionAreaColumn,
     SectionTitle,
@@ -109,7 +110,8 @@ function Apresentation(){
                     <SectionDesc>
 
                         Através de trilhas e aulas que  introduzem o princípio da ferramenta.
-                    </SectionDesc>                    
+                    </SectionDesc> 
+                    <SectionButton>Acessar os cursos</SectionButton>                   
                    
                 </SectionArea>
 

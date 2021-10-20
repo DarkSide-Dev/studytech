@@ -8,6 +8,7 @@ export const Header = styled.header`
     height: 50px;
     display: flex;
     align-items: center;
+    position: fixed;
 `;
 
 export const Title = styled.h2`
@@ -164,6 +165,17 @@ export const SectionSubtitle = styled.h3`
     font-weight: bold;
     font-size: 45px;
     margin: 0;
+`;
+
+export const SectionButton = styled.button`
+    color: #fff;
+    background-color: #0d378c;
+    font-size: 30px;
+    border-radius: 5px;
+    width: 20rem;
+    border: 2px solid transparent;
+    margin: 20px 0 0 0;
+    cursor: pointer;
 `;
 
 export const SectionTitle = styled.h3`
