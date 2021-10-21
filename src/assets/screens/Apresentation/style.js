@@ -250,11 +250,11 @@ export const Section = styled.section`
 `;
 
 export const SectionArea = styled.div`
-    display: flex;
+    display: ${props => props.mostrar?"none":"flex"};
     flex-direction: column;
     flex: 1;
 
-    :nth-child(2){
+    :nth-child(3){
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
@@ -262,12 +262,13 @@ export const SectionArea = styled.div`
     }
     
     @media(max-width:400px){
-        :nth-child(3){
+        display: ${props => props.mostrar?"flex":"flex"};
+        :nth-child(2){
             flex-direction: row;
             align-items: center;
             justify-content: space-evenly;
             flex: 1.5;
-            margin-top: 20px;
+            margin: 20px 0;
         }
     }
 `;
@@ -298,10 +299,22 @@ export const SectionButton = styled.button`
     border: 2px solid transparent;
     margin: 20px 0 0 0;
     cursor: pointer;
+
+    :nth-child(1){
+        display: none;
+    }
    
     @media(max-width:400px){
         font-size: 25px;
-        margin: 30px 25px 20px;
+        margin: 0;
+
+        :nth-child(1){
+            display: block;
+        }
+
+        :nth-child(3){
+            display: none;
+        }
     }
 `;
 
@@ -374,7 +387,7 @@ export const Article = styled.article`
     margin-bottom: 30px;
 
     @media(max-width:400px){
-        margin-left: 35px;
+        box-shadow: 0 0 5px #16e2fd;
     }
 `;
 
