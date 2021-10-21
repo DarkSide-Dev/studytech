@@ -242,6 +242,11 @@ export const Section = styled.section`
         flex-direction: column;
         color:#d9d9d9;
     }
+
+    @media(max-width:400px){
+        flex-direction: column;
+        padding: 15px;
+    }
 `;
 
 export const SectionArea = styled.div`
@@ -254,6 +259,16 @@ export const SectionArea = styled.div`
         align-items: center;
         justify-content: space-evenly;
         flex: 1.5;
+    }
+    
+    @media(max-width:400px){
+        :nth-child(3){
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            flex: 1.5;
+            margin-top: 20px;
+        }
     }
 `;
 
@@ -268,6 +283,10 @@ export const SectionSubtitle = styled.h3`
     font-weight: bold;
     font-size: 45px;
     margin: 0;
+
+    @media(max-width:400px){
+        font-size: 35px;
+    }
 `;
 
 export const SectionButton = styled.button`
@@ -279,6 +298,11 @@ export const SectionButton = styled.button`
     border: 2px solid transparent;
     margin: 20px 0 0 0;
     cursor: pointer;
+   
+    @media(max-width:400px){
+        font-size: 25px;
+        margin: 30px 25px 20px;
+    }
 `;
 
 export const SectionTitle = styled.h3`
@@ -287,6 +311,10 @@ export const SectionTitle = styled.h3`
     font-size: 40px;
     margin: 0;
     text-align: center;
+
+    @media(max-width:400px){
+        font-size: 35px;
+    }
 `;
 
 export const SectionDesc = styled.p`
@@ -296,6 +324,12 @@ export const SectionDesc = styled.p`
     font-size: 25px;
     padding-top: 20px;
     width: 80%;
+
+    @media(max-width:400px){
+        font-size: 20px;
+        text-align: justify;
+        width: 100%;
+    }
 `;
 
 export const SectionImg = styled.img`
@@ -304,12 +338,25 @@ export const SectionImg = styled.img`
     width: 100px;
     height: 100px;
     border: 2px solid #fff;
+    display: ${props => props.mostrar?"block":"none"};
+
+    @media(max-width:400px){
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        display: ${props => props.mostrar?"none":"block"};
+    }
 `;
 
 export const ArticleArea = styled.div`
     display: flex;
     justify-content: space-evenly;
     padding-top: 40px;
+
+    @media(max-width:400px){
+        font-size: 25px;
+        flex-direction: column;
+    }
 `;
 
 export const Article = styled.article`
@@ -325,6 +372,10 @@ export const Article = styled.article`
     border: 5px solid #fffef5;
     box-shadow: 0 0 30px #16e2fd;
     margin-bottom: 30px;
+
+    @media(max-width:400px){
+        margin-left: 35px;
+    }
 `;
 
 export const ArticleTitle = styled.h3`
@@ -339,4 +390,8 @@ export const ArticleText = styled.p`
     font-size: 25px;
     margin: 0;
     text-align: center;
+
+    @media(max-width:400px){
+        margin-bottom: 10px;
+    }
 `;

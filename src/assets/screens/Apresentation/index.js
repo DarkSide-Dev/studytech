@@ -161,17 +161,26 @@ function Apresentation(){
                     <SectionDesc>
 
                         Através de trilhas e aulas que  introduzem o princípio da ferramenta.
-                    </SectionDesc> 
+                    </SectionDesc>
+                <SectionArea>  
+
+                    <SectionImg mostrar={false} src={Linkedin} />
+                    <SectionImg mostrar={false} src={WppBussiness} />
+                    <SectionImg mostrar={false} src={Excel} />
+                    <SectionImg mostrar={false} src={Trello} />
+                
+                </SectionArea>
+
                     <SectionButton>Acessar os cursos</SectionButton>                   
                    
                 </SectionArea>
 
                 <SectionArea>
 
-                    <SectionImg src={Linkedin} />
-                    <SectionImg src={WppBussiness} />
-                    <SectionImg src={Excel} />
-                    <SectionImg src={Trello} />
+                    <SectionImg mostrar={true} src={Linkedin} />
+                    <SectionImg mostrar={true} src={WppBussiness} />
+                    <SectionImg mostrar={true} src={Excel} />
+                    <SectionImg mostrar={true} src={Trello} />
 
                 </SectionArea>
                 
