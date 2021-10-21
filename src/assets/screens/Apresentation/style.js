@@ -247,6 +247,11 @@ export const Section = styled.section`
         flex-direction: column;
         padding: 15px;
     }
+
+    @media (max-width: 600px){
+        flex-direction: column;
+        padding: 20px;
+    }
 `;
 
 export const SectionArea = styled.div`
@@ -271,6 +276,18 @@ export const SectionArea = styled.div`
             margin: 20px 0;
         }
     }
+
+    @media(max-width: 600px){
+        display: ${props => props.mostrar?"flex":"flex"};
+        :nth-child(2){
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            flex: 1.5;
+            margin: 20px 0;
+        }
+    }
+
 `;
 
 export const SectionAreaColumn = styled.div`
@@ -287,6 +304,12 @@ export const SectionSubtitle = styled.h3`
 
     @media(max-width:400px){
         font-size: 35px;
+    }
+
+    @media(max-width: 600px){
+        font-size: 40px;
+        text-align: center;
+        margin: auto;
     }
 `;
 
@@ -316,6 +339,17 @@ export const SectionButton = styled.button`
             display: none;
         }
     }
+
+    @media(max-width: 600px){
+        font-size: 25px;
+        margin: 0;
+
+        :nth-child(3){
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+        }
+    }
 `;
 
 export const SectionTitle = styled.h3`
@@ -327,6 +361,11 @@ export const SectionTitle = styled.h3`
 
     @media(max-width:400px){
         font-size: 35px;
+    }
+
+    @media(max-width: 600px){
+        font-size: 35px;
+        margin: 0 10px 25px 10px;
     }
 `;
 
@@ -342,6 +381,13 @@ export const SectionDesc = styled.p`
         font-size: 20px;
         text-align: justify;
         width: 100%;
+    }
+
+    @media(max-width: 600px){
+        font-size: 25px;
+        text-align: justify;
+        margin: auto;
+        margin-bottom: 15px
     }
 `;
 
@@ -359,6 +405,13 @@ export const SectionImg = styled.img`
         border-radius: 10px;
         display: ${props => props.mostrar?"none":"block"};
     }
+
+    @media(max-width: 600px){
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        margin: 10px;
+    }
 `;
 
 export const ArticleArea = styled.div`
@@ -369,6 +422,12 @@ export const ArticleArea = styled.div`
     @media(max-width:400px){
         font-size: 25px;
         flex-direction: column;
+    }
+
+    @media(max-width: 600px){
+        flex-direction: column;
+        margin: auto;
+        padding: 0;
     }
 `;
 
@@ -389,6 +448,13 @@ export const Article = styled.article`
     @media(max-width:400px){
         box-shadow: 0 0 5px #16e2fd;
     }
+
+    @media(max-width: 600px){
+        box-shadow: 0 0 15px #16e2fd;
+        width: 400px;
+        height: 300px;
+        padding: 15px 20px;
+    }
 `;
 
 export const ArticleTitle = styled.h3`
@@ -407,4 +473,6 @@ export const ArticleText = styled.p`
     @media(max-width:400px){
         margin-bottom: 10px;
     }
+
+    
 `;
