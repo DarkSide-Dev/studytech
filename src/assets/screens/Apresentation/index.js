@@ -164,7 +164,9 @@ function Apresentation(){
 
                     </SectionDesc>
 
-                    <SectionButton>Acessar os cursos</SectionButton>
+                    { widthDevice >= 800 &&
+                        <SectionButton>Acessar os cursos</SectionButton>
+                    }                    
 
                 </SectionArea>
 
@@ -188,7 +190,9 @@ function Apresentation(){
 
                 <SectionArea mostrar={true}>
 
-                    <SectionButton>Acessar os cursos</SectionButton>
+                    { widthDevice < 800 &&
+                        <SectionButton>Acessar os cursos</SectionButton>
+                    }   
 
                 </SectionArea>
                 
