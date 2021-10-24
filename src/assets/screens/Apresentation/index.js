@@ -9,6 +9,12 @@ import Excel from '../../img/excel-logo.png';
 import User from '../../img/user.png';
 import Logo from '../../img/logo.png';
 
+import Lucratividade from '../../img/increase.png';
+import Mercado from '../../img/market.png';
+import Produtividade from '../../img/productivity.png';
+
+import BannerApp from '../../img/app.svg';
+
 import {
 
     Header,
@@ -41,7 +47,15 @@ import {
     LogoImg,
     UserImg,
     AreaLogin,
-    AreaLoginButton
+    AreaLoginButton,
+    ArticleImg,
+    ArticleImgArea,
+    SectionLeft,
+    SectionRight,
+    BannerArea,
+    RightTitle,
+    RightText,
+    RightButton
 
 } from './style.js';
 
@@ -203,7 +217,7 @@ function Apresentation(){
                 <SectionAreaColumn>
 
                     <SectionTitle>
-                        Motivos para aderir tecnologia à sua empresa
+                        Vantagens do uso da tecnologia
                     </SectionTitle>
                 
                 </SectionAreaColumn>
@@ -211,43 +225,87 @@ function Apresentation(){
                 <ArticleArea>
                     
                     <Article>
+
+                        <ArticleImgArea>
+                            
+                            <ArticleImg src={Lucratividade} />
+                        
+                        </ArticleImgArea>
+                        
                         
                         <ArticleTitle>
                             Lucratividade
-                        </ArticleTitle>
+                        </ArticleTitle>                        
 
                         <ArticleText>
-                            Permite um trabalho mais eficaz, redução de custos, e uma maior qualidade de vida no trabalho.
+                            Trabalho mais eficaz, permitindo redução de custos.
                         </ArticleText>
 
                     </Article>
 
                     <Article>
+
+                        <ArticleImgArea>
+                        
+                            <ArticleImg src={Mercado} />
+                        
+                        </ArticleImgArea>
 
                         <ArticleTitle>
                             Mercado
-                        </ArticleTitle>
+                        </ArticleTitle>                        
 
                         <ArticleText>
-                            Aumenta a participação de mercado e melhora o ciclo de vida dos produtos e serviços.
+                            Melhora o ciclo de vida dos produtos e serviços.
                         </ArticleText>
 
                     </Article>
 
                     <Article>
-
+                        
+                        <ArticleImgArea>
+                            <ArticleImg src={Produtividade} />
+                        </ArticleImgArea>
+                        
                         <ArticleTitle>
                             Produtividade
                         </ArticleTitle>
                         
                         <ArticleText>
-                            Otimiza processos, reduzindo o desperdício de recursos e fazendo mais com menos em menor tempo.
+                            Otimiza processos, fazendo mais com menos em menor tempo.
                         </ArticleText>
 
                     </Article>
                     
                 </ArticleArea>
 
+            </Section>
+
+            <Section>
+                
+                <SectionLeft>
+
+                    <BannerArea src={BannerApp} />
+                    
+                </SectionLeft>
+                
+                
+                <SectionRight>
+                
+                    <RightTitle>
+                        Acesse pelo aplicativo
+                    </RightTitle>
+                    
+                    <RightText>
+                        Tenha acesso de forma rápida e gratuita das aulas e trilhas da plataforma Study Tech através do nosso aplicativo, com toda a incrível experiência da nossa plataforma aonde você precisar.
+                    </RightText>
+
+                    <RightButton>
+                        Acessar o Study Tech App
+                    </RightButton>
+                    
+                </SectionRight>
+            
             </Section>
 
         </Container>

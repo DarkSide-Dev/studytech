@@ -238,9 +238,13 @@ export const Section = styled.section`
     box-sizing: border-box;
     border-bottom: 2px solid #0d378c;
     
-    :last-child{
+    :nth-child(4){
         flex-direction: column;
         color:#d9d9d9;
+    }
+
+    :nth-child(5){
+        background-color: #2b72ff;
     }
 
     @media(max-width:400px){
@@ -439,6 +443,8 @@ export const Article = styled.article`
     padding: 5px 10px;
     align-items: center;
     width: 300px;
+    min-height: 350px;
+    max-height: auto;
     background-color: #a0bbf2;
     transition: box-shadow .3s ease-in-out;
     border: 5px solid #fffef5;
@@ -459,20 +465,75 @@ export const Article = styled.article`
 
 export const ArticleTitle = styled.h3`
     color: #152126;
-    font-size: 32px;
+    font-size: 25px;
     margin: 0;
-    padding: 5px 0 15px 0;
+    padding: 5px 0 35px 0;
 `;
 
 export const ArticleText = styled.p`
-    color: #152126;
+    color: #2b3e47;
     font-size: 25px;
     margin: 0;
     text-align: center;
+    margin-bottom: 40px;
+    padding: 0 10px;
 
-    @media(max-width:400px){
-        margin-bottom: 10px;
+    @media(max-width: 400px){
+        margin: 0;
+        padding:0;
     }
+`;
 
-    
+export const ArticleImg = styled.img`
+    width: 50px;
+    height: 50px;
+`;
+
+export const ArticleImgArea = styled.div`
+    background-color: #005aa7;
+    border-radius: 50%;
+    margin-top: 10px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+`;
+
+export const SectionLeft = styled.div`
+    flex: 1;
+`;
+
+export const BannerArea = styled.img`
+    transform: rotateY(180deg);
+    width: 60%;
+    margin-left: 50px;
+`;
+
+export const SectionRight = styled.div`
+    flex: 1;
+`;
+
+export const RightTitle = styled.h2`
+    font-size: 40px;
+    color: #d9d9d9;
+`;
+
+export const RightText = styled.p`
+    font-size: 20px;
+    color: #d9d9d9;
+    width: 80%;
+    margin-top: 15px;
+`;
+
+export const RightButton = styled.button`
+    background-color: #005aa7;
+    font-size: 25px;
+    color: #fff;
+    margin-top: 30px;
+    padding: 7px 0;
+    border: 0;
+    border-radius: 10px;
+    width: 80%;
 `;
