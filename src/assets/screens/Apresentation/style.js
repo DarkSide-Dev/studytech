@@ -501,6 +501,12 @@ export const ArticleArea = styled.div`
         margin: auto;
         padding: 0;
     }
+
+    @media(max-width: 830px){
+        flex-direction: column;
+        margin: auto;
+        padding: 0;
+    }
 `;
 
 export const Article = styled.article`
@@ -528,6 +534,20 @@ export const Article = styled.article`
         width: 400px;
         height: 300px;
         padding: 15px 20px;
+    }
+
+    @media(max-width: 830px){
+        box-shadow: 0 0 25px #16e2fd;
+        width: 400px;
+        height: 300px;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    @media(max-width: 1024px){
+        box-shadow: 0 0 15px #16e2fd;
+        padding: 20px;
+        margin: 15px;
     }
 `;
 
@@ -582,8 +602,21 @@ export const BannerArea = styled.img`
     @media (max-width:600px){
         width: 45%;
         display: ${props => props.mostrar?"block":"none"};
-        margin: 30px 0 10px;
-        
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    @media (max-width:800px){
+        width: 40%;
+        display: ${props => props.mostrar?"block":"none"};
+        margin: auto;
+        margin-top: 30px;
+    }
+    @media (max-width:900px){
+        width: 45%;
+        display: ${props => props.mostrar?"block":"none"};
+        margin: auto;
+        margin-top: 30px;
     }
 `;
 
@@ -604,12 +637,19 @@ export const RightTitle = styled.h2`
     color: #d9d9d9;
 
     @media(max-width: 400px){
-        font-size: 40px;
-        text-align: center;
+        font-size: 25px;
     }
     
     @media(max-width: 600px){
-        font-size: 40px;
+        font-size: 35px;
+    }
+
+    @media(max-width: 800px){
+        font-size: 45px;
+        text-align: center;
+    }
+
+    @media(max-width: 900px){
         text-align: center;
     }
 `;
@@ -631,7 +671,16 @@ export const RightText = styled.p`
         margin: 0;
         width: 100%;
     }
+    
+    @media(max-width:800px){
+        font-size: 25px;
+        margin: 0 30px;
+        width: 90%;
+    }
 
+    @media(max-width:900px){
+        margin: 0 30px;
+    }
 `;
 
 export const RightButton = styled.button`
@@ -651,6 +700,16 @@ export const RightButton = styled.button`
     @media(max-width: 600px){
         font-size: 25px;
         width: 80%;
-        margin: 30px 40px;
+        margin: 30px 0;
+    }
+
+    @media(max-width: 800px){
+        font-size: 25px;
+        margin: 40px 65px;
+    }
+
+    @media(max-width: 900px){
+        margin:  50px 160px;
+        width: 60%;
     }
 `;
