@@ -6,7 +6,7 @@ export const LogoImg = styled.img`
     
     display: none;
 
-    @media(max-width: 400px){
+    @media(max-width: 500px){
         display: block;
         box-sizing: border-box;
         height: 100%;
@@ -42,7 +42,7 @@ export const AreaLoginButton = styled.button`
 export const UserImg = styled.img`    
     display: none;
 
-    @media(max-width: 400px){
+    @media(max-width: 650px){
         display: block;
         height: 100%;
         margin-left: auto;
@@ -69,8 +69,12 @@ export const Title = styled.h2`
     padding-left: 50px;
     font-weight: normal;
 
-    @media(max-width: 400px) {
+    @media(max-width: 500px) {
         display: none;
+    }
+
+    @media(max-width: 600px){
+        font-size: 35px;
     }
 `;
 
@@ -82,7 +86,7 @@ export const Cadastro = styled.button`
     margin-left: auto;
     cursor: pointer;
 
-    @media(max-width: 400px) {
+    @media(max-width: 650px) {
         display: none;
     }
 `;
@@ -98,7 +102,7 @@ export const OutlineButton = styled.button`
     cursor: pointer;
     transition: all ease .3s;    
 
-    display: ${props => props.mostrar <= 400?"none":"block"};
+    display: ${props => props.mostrar <= 650?"none":"block"};
 
     :nth-child(2){
         font-size: 25px;
@@ -108,8 +112,14 @@ export const OutlineButton = styled.button`
         border-color: #ff6e18;
     }
 
-    @media(max-width: 400px){
+    @media(max-width: 500px){
         width: 200px;
+    }
+    
+    @media(min-width: 900px) and (max-width: 950px){
+        :nth-child(2){
+            font-size: 30px;
+        }  
     }
 `;
 
@@ -126,9 +136,15 @@ export const SolidButton = styled.button`
         font-size: 25px;
     }
 
-    @media(max-width: 400px){
+    @media(max-width: 500px){
         width: 200px;
         margin: 30px 0 20px 0;
+    }
+
+    @media(min-width: 900px) and (max-width: 950px){
+        :nth-child(1){
+            font-size: 30px;
+        }  
     }
 `;
 
@@ -141,7 +157,7 @@ export const Main = styled.main`
     padding-top: 70px;
     border-bottom: 2px solid #0d378c;
 
-    @media(max-width: 400px){
+    @media(max-width: 900px){
         flex-direction: column;
         padding: 80px 15px 30px 15px;
     }
@@ -151,6 +167,10 @@ export const MainTextArea = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
+    
+    @media(max-width: 900px){
+        align-items: center;
+    }
 `;
 
 export const Badge = styled.p`
@@ -175,7 +195,7 @@ export const TextArea = styled.div`
     align-items: center;
     padding-top: 10px;
     
-    @media(max-width: 400px){
+    @media(max-width: 500px){
         
         :nth-child(1){
             justify-content: center;
@@ -183,6 +203,12 @@ export const TextArea = styled.div`
 
         :nth-child(5){
             flex-direction: column;            
+        }
+    }
+
+    @media(max-width: 900px){
+        :nth-child(5){
+            margin-bottom: 35px;
         }
     }
 `;
@@ -194,10 +220,21 @@ export const TitleIntroduction = styled.h1`
     width: 90%;
     padding-top: 20px;
 
-    @media(max-width: 400px){
-        font-size: 35px;
+    @media(max-width: 500px){
+        font-size: 35px !important;
         text-align: center;
         width: 100%;
+    }
+
+    @media(max-width: 800px){
+        text-align: center;
+        width: 100%;
+    }
+
+    @media(max-width: 900px){
+        text-align: center;
+        width: 100%;
+        font-size: 60px;
     }
 `;
 
@@ -205,12 +242,24 @@ export const Description = styled.h2`
     color: #d9d9d9;
     width: 600px;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 27px;
 
-    @media(max-width: 400px){
+    @media(max-width: 500px){
         font-size: 20px;
         text-align: justify;
         width: 100%;
+    }
+
+    @media(max-width: 700px){
+        margin: 20px 0;
+        text-align: justify;
+        width: 100%;
+    }
+
+    @media(max-width: 900px){
+        margin: 20px auto;
+        text-align: justify;
+        width: 90%;
     }
 `;
 
@@ -218,7 +267,7 @@ export const BannerImg = styled.img`
     width: 80%;
     display: ${props => props.mostrar?"block":"none"};
     
-    @media(max-width: 400px){
+    @media(max-width: 500px){
         display: ${props => props.mostrar?"none":"block"};
         width: 100%;
     }
@@ -253,7 +302,7 @@ export const Section = styled.section`
         padding: 15px;
     }
 
-    @media (max-width: 600px){
+    @media (max-width: 900px){
         flex-direction: column;
         padding: 20px;
     }
@@ -282,7 +331,7 @@ export const SectionArea = styled.div`
         }
     }
 
-    @media(max-width: 600px){
+    @media(max-width: 900px){
         display: ${props => props.mostrar?"flex":"flex"};
         :nth-child(2){
             flex-direction: row;
@@ -316,6 +365,12 @@ export const SectionSubtitle = styled.h3`
         text-align: center;
         margin: auto;
     }
+
+    @media(max-width: 900px){
+        font-size: 40px;
+        text-align: center;
+        margin: auto;
+    }
 `;
 
 export const SectionButton = styled.button`
@@ -345,9 +400,16 @@ export const SectionButton = styled.button`
         }
     }
 
-    @media(max-width: 600px){
+    @media(max-width: 900px){
         font-size: 25px;
         margin: 0;
+
+        :nth-child(1){
+            display: block;
+            margin: 50px auto 30px auto;
+            font-size: 30px;
+            padding: 10px 0;
+        }
 
         :nth-child(3){
             display: block;
@@ -393,6 +455,11 @@ export const SectionDesc = styled.p`
         text-align: justify;
         margin: auto;
         margin-bottom: 15px
+    }
+
+    @media(max-width: 900px){
+        width: 100%;
+        text-align: center;
     }
 `;
 
