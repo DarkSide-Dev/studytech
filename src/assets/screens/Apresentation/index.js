@@ -285,7 +285,7 @@ function Apresentation(){
                 
                 <SectionLeft>
 
-                    <BannerArea src={BannerApp} />
+                    <BannerArea mostrar={false} src={BannerApp} />
                     
                 </SectionLeft>
                 
@@ -299,6 +299,8 @@ function Apresentation(){
                     <RightText>
                         Tenha acesso de forma rápida e gratuita das aulas e trilhas da plataforma Study Tech através do nosso aplicativo, com toda a incrível experiência da nossa plataforma aonde você precisar.
                     </RightText>
+
+                    <BannerArea mostrar={true} src={BannerApp} />
 
                     <RightButton>
                         Acessar o Study Tech App

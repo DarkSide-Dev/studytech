@@ -59,6 +59,7 @@ export const Header = styled.header`
     position: fixed;
     border-bottom: 2px solid #0553f1;
     padding: 5px 0;
+    z-index: 999;
 `;
 
 export const Title = styled.h2`
@@ -509,15 +510,41 @@ export const BannerArea = styled.img`
     transform: rotateY(180deg);
     width: 60%;
     margin-left: 50px;
+    display: ${props => props.mostrar?"none":"block"};
+
+    @media (max-width:600px){
+        width: 45%;
+        display: ${props => props.mostrar?"block":"none"};
+        margin: 30px 0 10px;
+        
+    }
 `;
 
 export const SectionRight = styled.div`
     flex: 1;
+
+    @media (max-width: 400px){
+        margin: 0;
+    }
+
+    @media(max-width: 600px){
+     margin: 0 20px;
+    }
 `;
 
 export const RightTitle = styled.h2`
     font-size: 40px;
     color: #d9d9d9;
+
+    @media(max-width: 400px){
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    @media(max-width: 600px){
+        font-size: 40px;
+        text-align: center;
+    }
 `;
 
 export const RightText = styled.p`
@@ -525,6 +552,19 @@ export const RightText = styled.p`
     color: #d9d9d9;
     width: 80%;
     margin-top: 15px;
+
+    @media(max-width: 400px){
+        font-size: 25px;
+        margin: 0;
+        width: 100%;
+    }
+
+    @media(max-width:600px){
+        font-size: 25px;
+        margin: 0;
+        width: 100%;
+    }
+
 `;
 
 export const RightButton = styled.button`
@@ -536,4 +576,14 @@ export const RightButton = styled.button`
     border: 0;
     border-radius: 10px;
     width: 80%;
+
+    @media(max-width: 400px){
+        font-size: 10px;
+    }
+
+    @media(max-width: 600px){
+        font-size: 25px;
+        width: 80%;
+        margin: 30px 40px;
+    }
 `;
