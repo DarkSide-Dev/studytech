@@ -541,7 +541,7 @@ export const Article = styled.article`
         width: 400px;
         height: 300px;
         padding: 20px;
-        margin-top: 50px;
+        margin: 50px 0 0 0 !important;
     }
 
     @media(max-width: 1024px){
@@ -622,13 +622,17 @@ export const BannerArea = styled.img`
 
 export const SectionRight = styled.div`
     flex: 1;
+    display: flex;
+    flex-direction: column;
 
     @media (max-width: 400px){
         margin: 0;
+        width: 100%;
+        align-self: center;
     }
 
     @media(max-width: 600px){
-     margin: 0 20px;
+        margin: 0 20px;
     }
 `;
 
@@ -674,12 +678,12 @@ export const RightText = styled.p`
     
     @media(max-width:800px){
         font-size: 25px;
-        margin: 0 30px;
         width: 90%;
     }
 
     @media(max-width:900px){
-        margin: 0 30px;
+        margin: 0 auto;
+        text-align: center;
     }
 `;
 
@@ -695,21 +699,24 @@ export const RightButton = styled.button`
 
     @media(max-width: 400px){
         font-size: 10px;
+        margin: 20px 0 !important;
+        width: 100% !important;
     }
 
     @media(max-width: 600px){
         font-size: 25px;
-        width: 80%;
-        margin: 30px 0;
+        width: 100% !important;
+        margin: 30px 0 !important;
     }
 
     @media(max-width: 800px){
         font-size: 25px;
-        margin: 40px 65px;
+        margin: 30px 0 !important;
+        align-self: center;
     }
 
     @media(max-width: 900px){
-        margin:  50px 160px;
+        margin: 50px 160px;
         width: 60%;
     }
 `;
