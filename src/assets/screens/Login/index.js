@@ -26,6 +26,8 @@ import {
 
 import EmailImg from '../../img/email-icon.png';
 import PasswordImg from '../../img/password-icon.png';
+import UserImg from '../../img/name-icon.png';
+
 
 import FacebookIcon from '../../img/facebookicon.png';
 import GoogleIcon from '../../img/googleicon.png';
@@ -84,7 +86,7 @@ function Login(){
                     <InputAreaCadastro>
                     
                         <Label>Nome Completo</Label>
-                        <InputCadastro icon={EmailImg} type="text" placeholder="Digite seu nome completo" />
+                        <InputCadastro icon={UserImg} type="text" placeholder="Digite seu nome completo" />
 
                     </InputAreaCadastro>
 
