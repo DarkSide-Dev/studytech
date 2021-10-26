@@ -14,7 +14,13 @@ import {
     SocialMedia,
     Label,
     InputArea,
-    CadastroArea
+    CadastroArea,
+    CadastroTitle,
+    InputAreaCadastro,
+    InputCadastro,
+    CadastroButton,
+    CadastroSubtitle
+
 
 } from './style';
 
@@ -71,7 +77,51 @@ function Login(){
 
                 <CadastroArea>
 
+                    <CadastroTitle>
+                        Cadastre-se na Plataforma
+                    </CadastroTitle>
                    
+                    <InputAreaCadastro>
+                    
+                        <Label>Nome Completo</Label>
+                        <InputCadastro icon={EmailImg} type="text" placeholder="Digite seu nome completo" />
+
+                    </InputAreaCadastro>
+
+                    <InputAreaCadastro>
+                
+                        <Label>E-mail</Label>
+                        <InputCadastro icon={EmailImg} type="email" placeholder="Digite seu e-mail" />
+
+                    </InputAreaCadastro> 
+
+                    <InputAreaCadastro>
+                    
+                        <Label>Senha</Label>
+                        <InputCadastro icon={PasswordImg} type="password" placeholder="Digite sua senha" />
+
+                    </InputAreaCadastro>
+
+                    <InputAreaCadastro>
+                    
+                        <Label>Confirme sua senha</Label>
+                        <InputCadastro icon={PasswordImg} type="password" placeholder="Confirme sua senha" />
+
+                    </InputAreaCadastro>
+
+                    <CadastroButton>Cadastrar</CadastroButton>
+
+                    <CadastroSubtitle>Entre de outra forma</CadastroSubtitle>
+
+                    <SocialMediaArea>
+
+                        <SocialMedia src={FacebookIcon} />
+
+                        <SocialMedia fundo="#fff" src={GoogleIcon} />
+
+                        <SocialMedia fundo="#fff" src={LinkedinIcon} />
+
+                    </SocialMediaArea> 
 
                 </CadastroArea>
 

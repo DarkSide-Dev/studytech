@@ -103,3 +103,48 @@ export const CadastroArea = styled.div`
     flex-direction: column;
     position: relative;
 `;
+
+export const CadastroTitle = styled.h1`
+    font-size: 25px;
+    color: #01017c;
+    text-shadow: 0 0 1px black;
+    margin-bottom: 25px;
+`;
+
+export const InputAreaCadastro = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const InputCadastro = styled.input`
+    width: 300px;
+    height: 23px;
+    outline: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 2px solid #0d378c;
+    background-image: url(${props => props.icon});
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position-y: center;
+    background-position-x: 3px;
+    padding: 5px 0 5px 30px;
+    font-size: 15px;
+`;
+
+export const CadastroButton = styled.button`
+    width: auto;
+    font-size: 17px;
+    background-color: #2b72ff;
+    border-radius: 15px;
+    border: 2px solid #01017c;
+    padding: 5px 25px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 15px;
+`;
+
+export const CadastroSubtitle = styled.p`
+    margin-top: 25px;
+    color: #01017c;
+`;
