@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { useHistory } from 'react-router-dom'; // Importando o componente que nos levará a uma nova página
+
 import Banner from '../../img/undraw_professor_8lrt.svg';
 import WppBussiness from '../../img/whatsapp-business-34.png';
 import Linkedin from '../../img/174857.png';
@@ -65,6 +67,8 @@ function Apresentation(){
     const [showLogin, setShowLogin] = useState(false);
     const [showAnimation, setShowAnimation] = useState(false);
 
+    let history = useHistory();
+
     function showLoginArea(){
 
         if(showLogin){
@@ -91,6 +95,16 @@ function Apresentation(){
 
     }
 
+    function Login(){        
+        
+        // history.push('/cadastro'); -> Adiciona
+        // history.goBack(); -> Volta
+        // history.replace('/cadastro'); -> Substitui (não consegue voltar)
+        
+        history.push('/login');
+
+    }
+
     return(
 
         <Container>
@@ -101,9 +115,9 @@ function Apresentation(){
 
                 <Title>Study Tech</Title>
 
-                <Cadastro>Cadastre-se agora</Cadastro>
+                <Cadastro onClick={Login}>Cadastre-se agora</Cadastro>
 
-                <OutlineButton mostrar={widthDevice}>Entrar</OutlineButton>
+                <OutlineButton onClick={Login} mostrar={widthDevice}>Entrar</OutlineButton>
 
                 <UserImg onClick={showLoginArea} src={User} />
 
@@ -145,9 +159,9 @@ function Apresentation(){
 
                     <TextArea>
 
-                        <SolidButton>Ver mais</SolidButton>
+                        <SolidButton onClick={Login}>Ver mais</SolidButton>
 
-                        <OutlineButton>Criar conta</OutlineButton>
+                        <OutlineButton onClick={Login}>Criar conta</OutlineButton>
 
                     </TextArea>
 

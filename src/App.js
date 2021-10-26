@@ -11,6 +11,7 @@ import {
 } from 'react-router-dom'; // Biblioteca de rotas
 
 import Apresentation from './assets/screens/Apresentation';
+import Login from './assets/screens/Login';
 
 function App() {
 
@@ -23,6 +24,12 @@ function App() {
         <Route path='/' exact>
           
           <Apresentation />
+
+        </Route>
+
+        <Route path='/login'>
+          
+          <Login />
 
         </Route>
 
