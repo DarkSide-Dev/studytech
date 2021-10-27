@@ -19,8 +19,13 @@ import {
     InputAreaCadastro,
     InputCadastro,
     CadastroButton,
-    CadastroSubtitle
-
+    CadastroSubtitle,
+    CoverArea,
+    CoverTitle,
+    CoverDesc,
+    CoverButton,
+    Destacador,
+    FormImage
 
 } from './style';
 
@@ -33,7 +38,47 @@ import FacebookIcon from '../../img/facebookicon.png';
 import GoogleIcon from '../../img/googleicon.png';
 import LinkedinIcon from '../../img/linkedinicon.png';
 
+import FormImg from '../../img/form.svg';
+import FormImg2 from '../../img/form2.svg';
+
 function Login(){
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [password2, setPassword2] = useState('');
+
+    const [width, setWidth] = useState('50%');
+    const [right, setRight] = useState('0%');
+
+    function showForm(form){
+
+        if(form == 0){
+
+            setWidth('100%');
+            
+            setTimeout(() => {
+
+                setRight('50%');
+                setWidth('50%');
+
+            }, 600);
+
+        }
+        else{
+
+            setWidth('100%');
+            setRight('0%');            
+            
+            setTimeout(() => {
+                                
+                setWidth('50%');
+
+            }, 600);
+
+        }
+
+    }
 
     return(
 
@@ -48,14 +93,14 @@ function Login(){
                     <InputArea>
                     
                         <Label>E-mail</Label>
-                        <Input icon={EmailImg} type="email" placeholder="Digite seu e-mail" />
+                        <Input onChange={evento => setEmail(evento.target.value)} value={email} icon={EmailImg} type="email" placeholder="Digite seu e-mail" />
 
                     </InputArea>
 
                     <InputArea>
                     
                         <Label>Senha</Label>
-                        <Input icon={PasswordImg} type="password" placeholder="Digite sua senha" />
+                        <Input onChange={evento => setPassword(evento.target.value)} value={password} icon={PasswordImg} type="password" placeholder="Digite sua senha" />
 
                     </InputArea>                    
 
@@ -86,28 +131,28 @@ function Login(){
                     <InputAreaCadastro>
                     
                         <Label>Nome Completo</Label>
-                        <InputCadastro icon={UserImg} type="text" placeholder="Digite seu nome completo" />
+                        <InputCadastro onChange={evento => setName(evento.target.value)} value={name} icon={UserImg} type="text" placeholder="Digite seu nome completo" />
 
                     </InputAreaCadastro>
 
                     <InputAreaCadastro>
                 
                         <Label>E-mail</Label>
-                        <InputCadastro icon={EmailImg} type="email" placeholder="Digite seu e-mail" />
+                        <InputCadastro onChange={evento => setEmail(evento.target.value)} value={email} icon={EmailImg} type="email" placeholder="Digite seu e-mail" />
 
                     </InputAreaCadastro> 
 
                     <InputAreaCadastro>
                     
                         <Label>Senha</Label>
-                        <InputCadastro icon={PasswordImg} type="password" placeholder="Digite sua senha" />
+                        <InputCadastro onChange={evento => setPassword(evento.target.value)} value={password} icon={PasswordImg} type="password" placeholder="Digite sua senha" />
 
                     </InputAreaCadastro>
 
                     <InputAreaCadastro>
                     
                         <Label>Confirme sua senha</Label>
-                        <InputCadastro icon={PasswordImg} type="password" placeholder="Confirme sua senha" />
+                        <InputCadastro onChange={evento => setPassword2(evento.target.value)} value={password2} icon={PasswordImg} type="password" placeholder="Confirme sua senha" />
 
                     </InputAreaCadastro>
 
@@ -126,6 +171,34 @@ function Login(){
                     </SocialMediaArea> 
 
                 </CadastroArea>
+
+                <CoverArea largura={width} posicao={right}>                    
+
+                    { right == '0%' &&
+                        <>
+                            <CoverTitle>Não possui uma conta?</CoverTitle>
+
+                            <CoverDesc>Faça seu cadastro de forma rápida e <Destacador>GRATUITA</Destacador></CoverDesc>
+
+                            <CoverButton onClick={() => {showForm(0)}}>Cadastre-se</CoverButton>
+
+                            <FormImage src={FormImg} />
+                        </>
+                    }
+
+                    { right == '50%' &&
+                        <>
+                            <CoverTitle>Já possui uma conta?</CoverTitle>
+
+                            <CoverDesc>Faça seu login de forma rápida e <Destacador>prática</Destacador></CoverDesc>
+
+                            <CoverButton onClick={() => {showForm(1)}}>Entrar</CoverButton>
+
+                            <FormImage src={FormImg2} />
+                        </>
+                    }
+
+                </CoverArea>
 
             </AreaFormulario>
 

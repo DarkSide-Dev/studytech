@@ -15,6 +15,7 @@ export const AreaFormulario = styled.div`
     background-color: #a0bbf2;
     display: flex;
     border-radius: 30px;
+    position: relative;
 `;
 
 export const LoginArea = styled.div`
@@ -147,4 +148,61 @@ export const CadastroButton = styled.button`
 export const CadastroSubtitle = styled.p`
     margin-top: 25px;
     color: #01017c;
+`;
+
+export const CoverArea = styled.div`
+    position: absolute;
+    width: ${props => props.largura};
+    height: 100%;
+    background-color: #01017c;
+    transition: all .7s ease;
+    right: ${props => props.posicao};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+    
+export const CoverTitle = styled.h2`
+    color: #d9d9d9;
+    font-size: 30px;
+    text-align: center;
+    margin: 80px 0 20px 0;
+`;
+
+export const CoverDesc = styled.p`
+    color: #d9d9d9;
+    font-size: 20px;
+    width: 85%;
+    text-align: center;
+`;
+
+export const CoverButton = styled.button`
+    font-size: 18px;
+    background-color: inherit;
+    border: 2px solid #2b72ff;
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: #d9d9d9;
+    margin-top: 10px;
+    transition: all ease .3s;
+    font-weight: bold;
+
+    :hover{
+        background-color: #9db7ed;
+        border-color: #9db7ed;
+        color: #000;
+        cursor: pointer;
+        font-weight: bold;
+    }
+`;
+
+export const Destacador = styled.span`
+    font-weight: bold;
+`;
+
+export const FormImage = styled.img`
+    width: 240px;
+    position: absolute;
+    bottom: 15px;
+    align-self: center;
 `;
