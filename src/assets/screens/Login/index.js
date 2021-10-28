@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FacebookLogin from 'react-facebook-login';
 
 import {
 
@@ -51,6 +52,24 @@ function Login(){
     const [width, setWidth] = useState('50%');
     const [right, setRight] = useState('0%');
 
+    const responseFacebook = (response) => {
+        console.log(response);
+        alert(response.email);
+        alert(response.name);
+
+        // <FacebookLogin
+        //         appId="879455436079912"
+        //         autoLoad={true}
+        //         onClick={componentClicked}
+        //         fields="name,email"
+        //         scope="public_profile"
+        //         callback={responseFacebook} />
+    }
+
+    const componentClicked = (response) => {
+        console.log(response);
+    }
+
     function showForm(form){        
 
         if(form == 0){
@@ -96,7 +115,7 @@ function Login(){
 
             <AreaFormulario>
             
-                <LoginArea>
+                <LoginArea>                
 
                     <LoginTitle>Entrar na Plataforma</LoginTitle>
 
