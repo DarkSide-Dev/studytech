@@ -51,13 +51,18 @@ function Login(){
     const [width, setWidth] = useState('50%');
     const [right, setRight] = useState('0%');
 
-    function showForm(form){
+    function showForm(form){        
 
         if(form == 0){
 
             setWidth('100%');
             
             setTimeout(() => {
+
+                setName('');
+                setEmail('');
+                setPassword('');
+                setPassword2('');
 
                 setRight('50%');
                 setWidth('50%');
@@ -71,6 +76,11 @@ function Login(){
             setRight('0%');            
             
             setTimeout(() => {
+
+                setName('');
+                setEmail('');
+                setPassword('');
+                setPassword2('');
                                 
                 setWidth('50%');
 

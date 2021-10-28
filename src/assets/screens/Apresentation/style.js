@@ -85,6 +85,27 @@ export const Cadastro = styled.button`
     border: 0;
     margin-left: auto;
     cursor: pointer;
+    transition: all ease .4s;
+    position: relative;
+    padding: 0;
+    transition: all ease .3s;
+
+    ::after{
+        content: " ";
+        position: absolute;
+        height: 2px;
+        background-color: #d9d9d9;
+        width: 0%;
+        left: 0;
+        bottom: 0;
+        transition: all ease .6s;
+    }
+
+    :hover{
+        ::after{
+            width: 100%;
+        }
+    }
 
     @media(max-width: 650px) {
         display: none;
@@ -379,9 +400,14 @@ export const SectionButton = styled.button`
     font-size: 30px;
     border-radius: 5px;
     width: 20rem;
-    border: 2px solid transparent;
+    border: 2px solid #0d378c;
     margin: 20px 0 0 0;
     cursor: pointer;
+    transition: all ease .1s;
+
+    :hover{
+        border-color: #fff;
+    }
 
     :nth-child(1){
         display: none;
@@ -693,9 +719,16 @@ export const RightButton = styled.button`
     color: #fff;
     margin-top: 30px;
     padding: 7px 0;
-    border: 0;
     border-radius: 10px;
     width: 80%;
+    cursor: pointer;
+    transition: all ease .3s;
+    border: 2px solid #005aa7;
+
+    :hover{
+        border-color: #fff;
+    }
+
 
     @media(max-width: 400px){
         font-size: 10px;

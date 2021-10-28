@@ -48,6 +48,11 @@ export const Input = styled.input`
     background-position-x: 3px;
     padding: 5px 0 5px 35px;
     font-size: 17px;
+
+    
+    :focus{
+        background-color: #eee;
+    }
 `;
 
 export const InputArea = styled.div`
@@ -131,6 +136,10 @@ export const InputCadastro = styled.input`
     background-position-x: 3px;
     padding: 5px 0 5px 30px;
     font-size: 15px;
+
+    :focus{
+        background-color: #eee;
+    }
 `;
 
 export const CadastroButton = styled.button`
