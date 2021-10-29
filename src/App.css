@@ -5,3 +5,16 @@
   max-width: 100% !important;
   overflow-x: hidden; 
 }
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{
+background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #115dff;
+  border-radius: 10px;
+}
