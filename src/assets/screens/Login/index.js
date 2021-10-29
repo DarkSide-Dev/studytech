@@ -26,7 +26,11 @@ import {
     CoverDesc,
     CoverButton,
     Destacador,
-    FormImage
+    FormImage,
+    ToggleArea,
+    ToggleButton,
+    CoverAreaM,
+    LogoImg
 
 } from './style';
 
@@ -42,6 +46,8 @@ import LinkedinIcon from '../../img/linkedinicon.png';
 import FormImg from '../../img/form.svg';
 import FormImg2 from '../../img/form2.svg';
 
+import Logo from '../../img/logo.png';
+
 function Login(){
 
     const [name, setName] = useState('');
@@ -51,6 +57,9 @@ function Login(){
 
     const [width, setWidth] = useState('50%');
     const [right, setRight] = useState('0%');
+    const [left, setLeft] = useState('100%');
+
+    const [show, setShow] = useState(true);
 
     const responseFacebook = (response) => {
         console.log(response);
@@ -109,13 +118,46 @@ function Login(){
 
     }
 
+    function mudarFormulario(){
+        if(show){
+
+            setLeft('-100%');
+            
+            setTimeout(() => {
+                setShow(!show);
+            }, 500);
+
+        }
+        else{
+
+            setLeft('100%');
+            
+            setTimeout(() => {
+                setShow(!show);
+            }, 500);
+
+        }
+    }
+
     return(
 
         <Container>
 
             <AreaFormulario>
             
-                <LoginArea>                
+                <LoginArea mostrar={show}>
+
+                    <ToggleArea>
+
+                        <ToggleButton mostrar="3px">
+                            Login
+                        </ToggleButton>
+
+                        <ToggleButton onClick={mudarFormulario} mostrar="0">
+                            Cadastro
+                        </ToggleButton>
+
+                    </ToggleArea>
 
                     <LoginTitle>Entrar na Plataforma</LoginTitle>
 
@@ -151,7 +193,19 @@ function Login(){
 
                 </LoginArea>
 
-                <CadastroArea>
+                <CadastroArea mostrar={!show}>
+
+                    <ToggleArea>
+
+                        <ToggleButton mostrar="0" onClick={mudarFormulario}>
+                            Login
+                        </ToggleButton>
+
+                        <ToggleButton mostrar="3px">
+                            Cadastro
+                        </ToggleButton>
+
+                    </ToggleArea>
 
                     <CadastroTitle>
                         Cadastre-se na Plataforma
@@ -228,6 +282,10 @@ function Login(){
                     }
 
                 </CoverArea>
+
+                <CoverAreaM left={left}>
+                    <LogoImg src={Logo} />
+                </CoverAreaM>
 
             </AreaFormulario>
 

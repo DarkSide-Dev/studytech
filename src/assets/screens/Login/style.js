@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
     background-color: #2b72ff;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +17,15 @@ export const AreaFormulario = styled.div`
     display: flex;
     border-radius: 30px;
     position: relative;
+
+    @media(max-width: 785px){
+        padding: 0 10px;
+        box-sizing: border-box;
+        min-height: 100vh;
+        max-height: auto;
+        border-radius: 0;
+        flex-direction: column;
+    }
 `;
 
 export const LoginArea = styled.div`
@@ -26,12 +36,22 @@ export const LoginArea = styled.div`
     justify-content: center;
     flex-direction: column;
     position: relative;
+
+    @media(max-width: 785px){
+        display: ${props => props.mostrar?"flex":"none"};
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
 `;
 
 export const LoginTitle = styled.h1`
     font-size: 30px;
     color: #01017c;
     text-shadow: 0 0 1px black;
+
+    @media(max-width: 785px){
+        font-size: 25px;
+    }
 `;
 
 export const Input = styled.input`
@@ -48,6 +68,10 @@ export const Input = styled.input`
     background-position-x: 3px;
     padding: 5px 0 5px 35px;
     font-size: 17px;
+
+    @media(max-width: 785px){
+        width: 250px;
+    }
 
     
     :focus{
@@ -67,9 +91,10 @@ export const Warning = styled.p`
 `;
 
 export const Label = styled.label`
-    margin-bottom: 2px;
+    padding-bottom: 2px;
     color: #01017c;
     font-weight: bold;
+    overflow-y: hidden;
 `;
 
 export const LoginButton = styled.button`
@@ -90,6 +115,7 @@ export const LoginSubtitle = styled.p`
 `;
 
 export const SocialMediaArea = styled.div`
+    overflow-y: hidden;
 `;
 
 export const SocialMedia = styled.img`
@@ -108,6 +134,12 @@ export const CadastroArea = styled.div`
     justify-content: center;
     flex-direction: column;
     position: relative;
+
+    @media(max-width: 785px){
+        display: ${props => props.mostrar?"flex":"none"};
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
 `;
 
 export const CadastroTitle = styled.h1`
@@ -115,6 +147,12 @@ export const CadastroTitle = styled.h1`
     color: #01017c;
     text-shadow: 0 0 1px black;
     margin-bottom: 25px;
+
+    @media(max-width: 785px){
+        font-size: 22px;
+        padding-top: 10px;
+        overflow-y: hidden;
+    }
 `;
 
 export const InputAreaCadastro = styled.div`
@@ -137,6 +175,11 @@ export const InputCadastro = styled.input`
     padding: 5px 0 5px 30px;
     font-size: 15px;
 
+    @media(max-width: 785px){
+        width: 250px;
+        height: 30px;
+    }
+
     :focus{
         background-color: #eee;
     }
@@ -152,6 +195,7 @@ export const CadastroButton = styled.button`
     color: #fff;
     font-weight: bold;
     margin-top: 15px;
+    overflow-y: hidden;
 `;
 
 export const CadastroSubtitle = styled.p`
@@ -169,6 +213,10 @@ export const CoverArea = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media(max-width: 785px){
+        display: none;
+    }
 `;
     
 export const CoverTitle = styled.h2`
@@ -214,4 +262,55 @@ export const FormImage = styled.img`
     position: absolute;
     bottom: 15px;
     align-self: center;
+`;
+
+export const ToggleArea = styled.div`
+    display: none;
+    width: 100%;
+    justify-content: space-evenly;
+
+    @media(max-width: 785px){
+        width: 250px;
+        display: flex;
+    }
+`;
+
+export const ToggleButton = styled.button`
+    background-color: transparent;
+    border: 0;
+    font-size: 17px;
+    color: #0050f4;
+    font-weight: bold;
+    position: relative;
+    overflow: visible;
+    padding-bottom: 6px;
+    text-shadow: 1px 0 1px black;
+        
+    ::after{
+        content: " ";
+        position: absolute;
+        width: 100%;
+        background-color: #01017c;
+        height: ${props => props.mostrar};
+        left: 0;
+        bottom: 0;
+    }
+
+`;
+
+export const CoverAreaM = styled.div`
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2b72ff;
+    left: ${props => props.left};
+    transition: all ease-in-out 1s;
+`;
+
+export const LogoImg = styled.img`
+    height: 50%;
+    border: 3px solid #d9d9d9;
 `;
