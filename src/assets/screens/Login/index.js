@@ -58,7 +58,7 @@ function Login(){
         alert(response.name);
 
         // <FacebookLogin
-        //         appId="879455436079912"
+        //         appId="1290080341430656"
         //         autoLoad={true}
         //         onClick={componentClicked}
         //         fields="name,email"
