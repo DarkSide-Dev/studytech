@@ -201,6 +201,7 @@ export const CadastroButton = styled.button`
 export const CadastroSubtitle = styled.p`
     margin-top: 25px;
     color: #01017c;
+    overflow-y: hidden;
 `;
 
 export const CoverArea = styled.div`
