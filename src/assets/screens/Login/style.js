@@ -51,6 +51,7 @@ export const LoginTitle = styled.h1`
 
     @media(max-width: 785px){
         font-size: 25px;
+        margin-top: 50px;
     }
 `;
 
@@ -70,6 +71,10 @@ export const Input = styled.input`
     font-size: 17px;
 
     @media(max-width: 785px){
+        width: 275px;
+    }
+
+    @media(max-width: 425px){
         width: 250px;
     }
 
@@ -107,11 +112,20 @@ export const LoginButton = styled.button`
     color: #fff;
     font-weight: bold;
     margin-top: 25px;
+
+    @media(max-width: 785px){
+        font-size: 20px;
+        width: 150px;
+    }
 `;
 
 export const LoginSubtitle = styled.p`
     margin-top: 60px;
     color: #01017c;
+
+    @media(max-width: 785px){
+        margin-top: 35px;
+    }
 `;
 
 export const SocialMediaArea = styled.div`
@@ -202,6 +216,10 @@ export const CadastroSubtitle = styled.p`
     margin-top: 25px;
     color: #01017c;
     overflow-y: hidden;
+    
+    @media(max-width: 785px){
+        height: auto;
+    }
 `;
 
 export const CoverArea = styled.div`
@@ -295,6 +313,10 @@ export const ToggleButton = styled.button`
         height: ${props => props.mostrar};
         left: 0;
         bottom: 0;
+    }
+
+    @media(max-width: 768px){
+        font-size: 23px;
     }
 
 `;
