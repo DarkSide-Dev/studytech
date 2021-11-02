@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import FacebookLogin from 'react-facebook-login';
+import React, { useEffect, useState } from 'react';
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+import GoogleLogin from 'react-google-login';
+import { useLocation } from 'react-router';
 
 import {
 
@@ -61,22 +63,103 @@ function Login(){
 
     const [show, setShow] = useState(true);
 
-    const responseFacebook = (response) => {
-        console.log(response);
-        alert(response.email);
-        alert(response.name);
+    let query = useQuery();
+    let code = query.get('code');
 
-        // <FacebookLogin
-        //         appId="1290080341430656"
-        //         autoLoad={true}
-        //         onClick={componentClicked}
-        //         fields="name,email"
-        //         scope="public_profile"
-        //         callback={responseFacebook} />
+    useEffect( () => {        
+        
+        if(code){
+            GetUrlTokenLinkedin();
+        }
+
+    },[]);
+
+    const GetUserFacebook = (response) => {
+        console.log(response);
+        setEmail(response.email);
+        setName(response.name);
     }
 
-    const componentClicked = (response) => {
-        console.log(response);
+    function GetUserGoogle(info){
+        console.log(info);
+        setName(info.profileObj.name);
+        setEmail(info.profileObj.email);
+    }
+
+    function useQuery() {
+        return new URLSearchParams(useLocation().search);
+    }    
+
+    async function GetUrlTokenLinkedin(){
+
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'x-www-form-urlencoded',
+                'Access-Control-Allow-Origin': '*'
+            },
+            mode: 'cors'
+        };
+        
+        const response = await fetch(`https://frozen-thicket-56741.herokuapp.com/https://www.linkedin.com/oauth/v2/accessToken?grant_type=authorization_code&code=${code}&client_id=86rufsqy7ofjdo&client_secret=OAtxndtqpPfDCRRn&redirect_uri=http://localhost:3000/login`, requestOptions);
+
+        const content = await response.json();
+
+        GetUserLinkedin(content);
+
+    }
+
+    async function GetMailLinkedin(token){
+
+        const requestOptions = {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token.access_token}`
+            }
+        };
+
+        console.log(requestOptions);
+        
+        const response = await fetch(`https://frozen-thicket-56741.herokuapp.com/https://api.linkedin.com/v2/emailAddress?q=members&projection=(elements*(handle~))`, requestOptions);
+
+        const content = await response.json();
+
+
+        setEmail(content.elements[0].["handle~"].emailAddress);
+
+    }
+
+    async function GetUserLinkedin(token){
+
+        const requestOptions = {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token.access_token}`
+            }
+        };
+
+        console.log(requestOptions);
+        
+        const response = await fetch(`https://frozen-thicket-56741.herokuapp.com/https://api.linkedin.com/v2/me`, requestOptions);
+
+        const content = await response.json();
+    
+        console.log(content);
+
+        let c_name = `${content.localizedFirstName} ${content.localizedLastName}`;
+
+        console.log(c_name);
+
+        setName(c_name);
+
+        GetMailLinkedin(token);
+
+    }
+    
+    async function GetTokenLinkedin(){
+
+        window.location = 'https://www.linkedin.com/oauth/v2/authorization?response_type=code&scope=r_liteprofile%20r_emailaddress&client_id=86rufsqy7ofjdo&redirect_uri=http://localhost:3000/login';
+        
     }
 
     function showForm(form){        
@@ -137,7 +220,7 @@ function Login(){
             }, 500);
 
         }
-    }
+    }    
 
     return(
 
@@ -161,7 +244,7 @@ function Login(){
 
                     <LoginTitle>Entrar na Plataforma</LoginTitle>
 
-                    <InputArea>
+                    <InputArea>                    
                     
                         <Label>E-mail</Label>
                         <Input onChange={evento => setEmail(evento.target.value)} value={email} icon={EmailImg} type="email" placeholder="Digite seu e-mail" />
@@ -183,11 +266,25 @@ function Login(){
 
                     <SocialMediaArea>
 
-                        <SocialMedia src={FacebookIcon} />
+                        <FacebookLogin
+                            appId="1290080341430656"
+                            autoLoad={true}
+                            fields="name,email"
+                            scope="public_profile"
+                            callback={GetUserFacebook}
+                            render={renderProps => (<SocialMedia onClick={renderProps.onClick} src={FacebookIcon} />)}
+                        />
 
-                        <SocialMedia fundo="#fff" src={GoogleIcon} />
+                        <GoogleLogin
+                            clientId="266649578627-h98qn2uekie7u51b68dsk0hmt24o0vvt.apps.googleusercontent.com"
+                            buttonText="CLICA AI MANO"
+                            onSuccess={GetUserGoogle}
+                            onFailure={GetUserGoogle}
+                            cookiePolicy={'single_host_origin'}
+                            render={renderProps => (<SocialMedia onClick={renderProps.onClick} fundo="#fff" src={GoogleIcon} />)}
+                        />                        
 
-                        <SocialMedia fundo="#fff" src={LinkedinIcon} />
+                        <SocialMedia onClick={GetTokenLinkedin} fundo="#fff" src={LinkedinIcon} />
 
                     </SocialMediaArea>
 
@@ -244,12 +341,26 @@ function Login(){
                     <CadastroSubtitle>Entre de outra forma</CadastroSubtitle>
 
                     <SocialMediaArea>
+                        
+                        <FacebookLogin
+                            appId="1290080341430656"
+                            autoLoad={true}
+                            fields="name,email"
+                            scope="public_profile"
+                            callback={GetUserFacebook}
+                            render={renderProps => (<SocialMedia onClick={renderProps.onClick} src={FacebookIcon} />)}
+                        />
 
-                        <SocialMedia src={FacebookIcon} />
+                        <GoogleLogin
+                            clientId="266649578627-h98qn2uekie7u51b68dsk0hmt24o0vvt.apps.googleusercontent.com"
+                            buttonText="CLICA AI MANO"
+                            onSuccess={GetUserGoogle}
+                            onFailure={GetUserGoogle}
+                            cookiePolicy={'single_host_origin'}
+                            render={renderProps => (<SocialMedia onClick={renderProps.onClick} fundo="#fff" src={GoogleIcon} />)}
+                        />                        
 
-                        <SocialMedia fundo="#fff" src={GoogleIcon} />
-
-                        <SocialMedia fundo="#fff" src={LinkedinIcon} />
+                        <SocialMedia onClick={GetTokenLinkedin} fundo="#fff" src={LinkedinIcon} />
 
                     </SocialMediaArea> 
 
