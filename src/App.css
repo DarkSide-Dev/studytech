@@ -3,7 +3,6 @@
 *{
   font-family: 'Open Sans', sans-serif;
   max-width: 100% !important;
-  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -11,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-track{
-background-color: #fff;
+  background-color: #fff;
 }
 
 ::-webkit-scrollbar-thumb{

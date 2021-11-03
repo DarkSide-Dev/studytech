@@ -1,6 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap';
 import './style.css';
 import UserIcon from '../../img/user.png';
 import LinkedinIcon from '../../img/174857.png';
