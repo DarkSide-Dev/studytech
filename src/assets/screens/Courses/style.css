@@ -1,0 +1,26 @@
+*{
+    font-family: 'Open Sans', sans-serif !important;
+    overflow-x: visible;
+}
+
+html{
+    background-color: #a0bbf2;
+}
+
+.centralizar{
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon{
+    width: 30px;
+}
+
+.bg-st{
+    background-color: #a0bbf2;
+}
+
+.progress{
+    width: 90%;
+}

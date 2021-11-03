@@ -12,6 +12,7 @@ import {
 
 import Apresentation from './assets/screens/Apresentation';
 import Login from './assets/screens/Login';
+import Courses from './assets/screens/Courses';
 
 function App() {
 
@@ -30,6 +31,12 @@ function App() {
         <Route path='/login'>
           
           <Login />
+
+        </Route>
+
+        <Route path="/courses">
+
+          <Courses />
 
         </Route>
 
