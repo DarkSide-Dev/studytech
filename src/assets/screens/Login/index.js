@@ -90,7 +90,7 @@ function Login(){
         return new URLSearchParams(useLocation().search);
     }    
 
-    async function GetUrlTokenLinkedin(){
+    async function GetUrlTokenLinkedin(){ // 2º - Utiliza o código gerado para valida-lo
 
         const requestOptions = {
             method: 'POST',
@@ -109,7 +109,7 @@ function Login(){
 
     }
 
-    async function GetMailLinkedin(token){
+    async function GetMailLinkedin(token){ // 4º - Utiliza o código válidado para pegar o email
 
         const requestOptions = {
             method: 'GET',
@@ -129,7 +129,7 @@ function Login(){
 
     }
 
-    async function GetUserLinkedin(token){
+    async function GetUserLinkedin(token){ // 3º - Utiliza o código válidado para pegar o nome/sobrenome
 
         const requestOptions = {
             method: 'GET',
@@ -156,7 +156,7 @@ function Login(){
 
     }
     
-    async function GetTokenLinkedin(){
+    async function GetTokenLinkedin(){ // 1º - Gera um código após o login
 
         window.location = 'https://www.linkedin.com/oauth/v2/authorization?response_type=code&scope=r_liteprofile%20r_emailaddress&client_id=86rufsqy7ofjdo&redirect_uri=http://localhost:3000/login';
         
