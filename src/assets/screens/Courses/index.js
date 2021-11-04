@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import UserIcon from '../../img/user.png';
 import LinkedinIcon from '../../img/174857.png';
@@ -13,39 +13,77 @@ import {
     CursoBtn,
     CursoImagem,
     CursoTitle,
-    CursoArea
+    CursoArea,
+    Container,
+    Nav,
+    NavTitle,
+    NavUserArea,
+    UserImg,
+    NavUser,
+    NavList,
+    NavItem,
+    NavText
 
 } from './style';
 
 function Courses(){
 
+    const [showConfig, setShowConfig] = useState(false);
+    const [opacity, setOpacity] = useState(0);
+    const [display, setDisplay] = useState('none');
+
+    function showMenu(){
+
+        if(showConfig){
+
+            setOpacity(0);
+
+            setTimeout(() => {
+                setDisplay('none');
+            }, 300);
+
+        }
+        else{
+
+            setDisplay('block');
+
+            setTimeout(() => {                
+                setOpacity(1);
+            }, 300);
+
+        }
+
+        setShowConfig(!showConfig);
+
+    }
+
     return(
 
-        <div className="bg-st">
+        <Container>
 
-            <nav className="navbar container navbar-dark bg-primary">
+            <Nav>
 
-                <div className="container-fluid">
+                <NavTitle>STUDY TECH</NavTitle>
 
-                    <a className="navbar-brand">STUDY TECH</a>
+                <NavText>Cursos</NavText>
 
-                    <h3 className="text-light" style={{margin: 0}}>Cursos</h3>
+                <NavUserArea>
 
-                    <div className="dropdown">
-
-                        <img src={UserIcon} class="rounded img-responsive dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" alt="..." />
-                        <a className="navbar-brand dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown">Nome do usuário</a>
-
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a className="dropdown-item" href="#">Configurações</a></li>
-                            <li><a className="dropdown-item" href="#">Sair</a></li>
-                        </ul>
-
-                    </div>
+                    <UserImg onClick={showMenu} src={UserIcon} />
                     
-                </div>
+                    <NavUser onClick={showMenu}>Gabriel Prado</NavUser>
+
+                    <NavList opacity={opacity} display={display}>
+
+                        <NavItem>Configurações</NavItem>
+                        
+                        <NavItem>Sair</NavItem>
+                        
+                    </NavList>
+
+                </NavUserArea>
                 
-            </nav>            
+            </Nav>            
 
             <CursoArea>
 
@@ -103,7 +141,7 @@ function Courses(){
 
                     <AreaInfo>
                     
-                        <CursoTitle>Whatsapp Business</CursoTitle>
+                        <CursoTitle>Business</CursoTitle>
 
                         <div class="progress">
                             <div class="progress-bar bg-warning" role="progressbar" style={{width: '25%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -161,7 +199,7 @@ function Courses(){
 
             </CursoArea>
 
-        </div>
+        </Container>
 
     );
 
