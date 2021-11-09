@@ -139,9 +139,20 @@ export const ProgressBar = styled.progress`
 `;
 
 export const CursoBtn = styled.button`
-
+    width: 80%;
+    align-self: center;
+    background-color: inherit;
+    border: 2px solid #fff;
+    padding: 5px 0;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all ease .4s;
 
     :hover{
-        background-color: #ddd !important;
+        background-color: #fff;
+        color: #222;
     }
 `;

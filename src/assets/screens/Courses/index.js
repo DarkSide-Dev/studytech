@@ -87,7 +87,7 @@ function Courses(){
 
             <CursoArea>
 
-                <Curso color="#0554f2" className="col-md-4 mb-3">
+                <Curso color="#0554f2">
 
                     <AreaImagem>
                     
@@ -103,13 +103,13 @@ function Courses(){
                             <div class="progress-bar bg-warning" role="progressbar" style={{width: '25%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
 
-                        <CursoBtn className="btn btn-light">Acessar</CursoBtn>
+                        <CursoBtn >Acessar</CursoBtn>
                     
                     </AreaInfo>
 
                 </Curso>
 
-                <Curso color="#107c41" className="col-md-4 mb-3">
+                <Curso color="#107c41">
 
                     <AreaImagem>
                     
@@ -125,13 +125,13 @@ function Courses(){
                             <div class="progress-bar bg-warning" role="progressbar" style={{width: '25%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
 
-                        <CursoBtn className="btn btn-light">Acessar</CursoBtn>
+                        <CursoBtn >Acessar</CursoBtn>
                     
                     </AreaInfo>
 
                 </Curso>
 
-                <Curso color="#2ebc2c" className="col-md-4 mb-3">
+                <Curso color="#2ebc2c">
 
                     <AreaImagem>
                     
@@ -147,13 +147,13 @@ function Courses(){
                             <div class="progress-bar bg-warning" role="progressbar" style={{width: '25%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
 
-                        <CursoBtn className="btn btn-light">Acessar</CursoBtn>
+                        <CursoBtn >Acessar</CursoBtn>
                     
                     </AreaInfo>
 
                 </Curso>
 
-                <Curso color="#0554f2" className="col-md-4 mb-3">
+                <Curso color="#0554f2">
 
                     <AreaImagem>
                     
@@ -169,13 +169,13 @@ function Courses(){
                             <div class="progress-bar bg-warning" role="progressbar" style={{width: '25%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
 
-                        <CursoBtn className="btn btn-light">Acessar</CursoBtn>
+                        <CursoBtn >Acessar</CursoBtn>
                     
                     </AreaInfo>
 
                 </Curso>
 
-                <Curso color="#107c41" className="col-md-4 mb-3">
+                <Curso color="#107c41">
 
                     <AreaImagem>
                     
@@ -191,7 +191,7 @@ function Courses(){
                             <div class="progress-bar bg-warning" role="progressbar" style={{width: '25%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
 
-                        <CursoBtn className="btn btn-light">Acessar</CursoBtn>
+                        <CursoBtn >Acessar</CursoBtn>
                     
                     </AreaInfo>
 
