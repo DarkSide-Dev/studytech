@@ -13,6 +13,7 @@ import {
 import Apresentation from './assets/screens/Apresentation';
 import Login from './assets/screens/Login';
 import Courses from './assets/screens/Courses';
+import Admin from './assets/screens/Admin';
 
 function App() {
 
@@ -37,6 +38,12 @@ function App() {
         <Route path="/courses">
 
           <Courses />
+
+        </Route>
+
+        <Route path="/admin">
+
+          <Admin />
 
         </Route>
 
