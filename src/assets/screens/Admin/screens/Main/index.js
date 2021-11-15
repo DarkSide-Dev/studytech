@@ -17,7 +17,17 @@ import CourseIcon from '../../../../img/courses.png';
 import AdIcon from '../../../../img/advertising.png';
 import FormIcon from '../../../../img/formicon.png';
 
+import { useHistory } from 'react-router-dom';
+
 const App = () => {
+
+    let history = useHistory();
+
+    function changeScreen(screen){
+
+        history.push(`/admin/${screen}`);
+
+    }
 
     return(
                 
@@ -39,7 +49,7 @@ const App = () => {
 
                 </MainItemArea>
 
-                <MainItemArea>
+                <MainItemArea onClick={() => {changeScreen('banner')}}>
 
                     <MainItemImg src={AdIcon} />
 
