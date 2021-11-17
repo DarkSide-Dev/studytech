@@ -46,9 +46,16 @@ export const BannerItem = styled.div`
 
 export const BannerImg = styled.img`
     width: 200px;
-    max-height: 200px;
+    max-height: 130px;
     border: 2px solid #0553f1;
     border-radius: 4px;
+`;
+
+export const BannerImgAdd = styled.img`
+    width: 100px;
+    max-height: 100px;
+    margin: auto;
+    cursor: pointer;
 `;
 
 export const BannerBtn = styled.button`

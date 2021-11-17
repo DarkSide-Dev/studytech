@@ -11,6 +11,7 @@ import {
 import Main from './screens/Main';
 
 import Banner from './screens/Banner';
+import BannerAdd from './screens/BannerAdd';
 
 const App = () => {
 
@@ -26,9 +27,15 @@ const App = () => {
 
                 </Route>
 
-                <Route path='/admin/banner'>
+                <Route path='/admin/banner' exact>
                 
                     <Banner />
+
+                </Route>
+
+                <Route path='/admin/banner/add' exact>
+                
+                    <BannerAdd />
 
                 </Route>
 
