@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import UserIcon from '../../img/icon-user.png';
+import {FaPlayCircle} from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
+import { FaAngleUp } from "react-icons/fa";
+import { FaVideo } from "react-icons/fa";
 
 import {
 
@@ -17,7 +21,7 @@ import {
     AreaGuia,
     GuiaTitle,
     GuiaTitle2,
-    AulasList,
+    Sidebar,
     AulaItem,
 
 
@@ -91,9 +95,11 @@ function Aulas() {
 
                 <AreaGuia>
                     
-                    <GuiaTitle>Iniciantes</GuiaTitle>
+                        <GuiaTitle> Iniciantes  
+                            <FaAngleDown/>
+                        </GuiaTitle>  
 
-                    <AulasList>
+                    <Sidebar>
 
                         <AulaItem>Aula 1: Introdução </AulaItem>
                         <AulaItem>Aula 2: Formatando Células</AulaItem>
@@ -101,11 +107,13 @@ function Aulas() {
                         <AulaItem>Aula 4: Gráficos e Média</AulaItem>
                         <AulaItem>Aula 5: Revisão</AulaItem>
 
-                    </AulasList>
+                    </Sidebar>
 
-                    <GuiaTitle2>Intermediário</GuiaTitle2>
-
-                    <AulasList>
+                        <GuiaTitle2> Intermediário 
+                            <FaAngleDown/>
+                        </GuiaTitle2>
+                   
+                    <Sidebar>
 
                         <AulaItem>Aula 1: Trabalhando com Condições </AulaItem>
                         <AulaItem>Aula 2: Validação de Células /Operação com datas </AulaItem>
@@ -113,7 +121,7 @@ function Aulas() {
                         <AulaItem>Aula 4: Media, Meridiana, Desvio</AulaItem>
                         <AulaItem>Aula 5: Matriz</AulaItem>
 
-                    </AulasList>
+                    </Sidebar>
 
                 </AreaGuia>
             

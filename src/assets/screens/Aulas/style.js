@@ -102,7 +102,7 @@ export const GuiaTitle = styled.h2`
     
 `;
 
-export const AulasList = styled.ul `
+export const Sidebar = styled.ul `
     
 `;
 
@@ -113,7 +113,13 @@ export const AulaItem = styled.li `
 export const GuiaTitle2 = styled.h2`
     font-size: 25px;
     padding: 15px;
-    margin-bottom: 0;
+    margin: 0;
     border-bottom: 2px solid #fff;
     border-top: 2px solid #fff;
+   
 `;
+
+export const FaAngleDown = styled.a`
+
+`;
+
