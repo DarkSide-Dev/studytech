@@ -12,6 +12,8 @@ import Main from './screens/Main';
 
 import Banner from './screens/Banner';
 import BannerAdd from './screens/BannerAdd';
+import BannerEdit from './screens/BannerEdit';
+import Form from './screens/Form';
 
 const App = () => {
 
@@ -36,6 +38,18 @@ const App = () => {
                 <Route path='/admin/banner/add' exact>
                 
                     <BannerAdd />
+
+                </Route>
+
+                <Route path='/admin/banner/edit' exact>
+                
+                    <BannerEdit />
+
+                </Route>
+
+                <Route path='/admin/form' exact>
+                
+                    <Form />
 
                 </Route>
 
