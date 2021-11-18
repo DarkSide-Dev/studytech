@@ -3,10 +3,10 @@ import './App.css';
 
 import {
 
-  BrowserRouter, // Mostra o conteúdo
-  Switch, // Define o conteúdo a ser mostrado
-  Route, // Define o nome da rota
-  Link // Direciona você para outra rota
+    BrowserRouter, // Mostra o conteúdo
+    Switch, // Define o conteúdo a ser mostrado
+    Route, // Define o nome da rota
+    Link // Direciona você para outra rota
 
 } from 'react-router-dom'; // Biblioteca de rotas
 
@@ -14,44 +14,51 @@ import Apresentation from './assets/screens/Apresentation';
 import Login from './assets/screens/Login';
 import Courses from './assets/screens/Courses';
 import Admin from './assets/screens/Admin';
+import Aulas from './assets/screens/Aulas'
 
 function App() {
 
-  return (
+    return (
 
-    <BrowserRouter>
-    
-      <Switch>
+        <BrowserRouter>
 
-        <Route path='/' exact>
-          
-          <Apresentation />
+            <Switch>
 
-        </Route>
+                <Route path = '/'exact>
 
-        <Route path='/login'>
-          
-          <Login />
+                    <Apresentation/>
 
-        </Route>
+                </Route>
 
-        <Route path="/courses">
+                <Route path = '/login'>
 
-          <Courses />
+                    <Login/>
 
-        </Route>
+                </Route>
 
-        <Route path="/admin">
+                <Route path = "/courses">
 
-          <Admin />
+                    <Courses/>
 
-        </Route>
+                </Route>
 
-      </Switch>
+                <Route path = "/admin">
 
-    </BrowserRouter>
+                    <Admin/>
 
-  );
+                </Route>
+
+                <Route path = "/aulas" >
+
+                    <Aulas/>
+
+                </Route>
+
+            </Switch>
+
+        </BrowserRouter>
+
+    );
 
 }
 
