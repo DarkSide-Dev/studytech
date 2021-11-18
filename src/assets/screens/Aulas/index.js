@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import UserIcon from '../../img/icon-user.png';
-import {FaPlayCircle} from "react-icons/fa";
-import { FaAngleDown } from "react-icons/fa";
-import { FaAngleUp } from "react-icons/fa";
-import { FaVideo } from "react-icons/fa";
+import DownIcon from "../../img/down-icon.svg";
+import VideoPlayer from 'react-video-js-player';
+import Player from '../../img/trailer_hd.mp4';
+import "./Video.css"
 
 import {
 
@@ -20,10 +20,11 @@ import {
     VideoTitle,
     AreaGuia,
     GuiaTitle,
-    GuiaTitle2,
     Sidebar,
     AulaItem,
-
+    Down,
+    FaseArea,
+    Description
 
 } from './style.js';
 
@@ -58,6 +59,14 @@ function Aulas() {
         
     }
 
+
+    function showAulas(){
+        
+    }
+
+    const videoSrc = Player;
+    const poster = "https://th.bing.com/th/id/OIP.rGBWHJSV5MrjC0FyyucVvwHaHa?w=188&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7";
+
     return (
 
         <Container>
@@ -91,14 +100,23 @@ function Aulas() {
                     
                     <VideoTitle>Microsoft Excel 2010</VideoTitle>
                 
+                    <VideoPlayer src={videoSrc} poster={poster} width= "750" height= "500"/>
+                    
+                    <Description>
+                            Você poderá aprofundar ainda mais seus conhecimentos a partir de temas que o ajudarão a desenvolver uma planilha dinâmica com aparência profissional ou até mesmo a resolver problemas com funções e recursos do programa.
+                            Com este curso, você aprenderá a usar funções, trabalhar com proteção de planilhas, validar dados para padronizá-los, criar macros para executar comandos automaticamente e, por fim, criar formulários para melhor visualização dos dados.
+                    </Description>
                 </AreaVideo>
 
                 <AreaGuia>
                     
-                        <GuiaTitle> Iniciantes  
-                            <FaAngleDown/>
-                        </GuiaTitle>  
-
+                    <FaseArea>
+                    
+                        <GuiaTitle onClick={showAulas}> Iniciantes</GuiaTitle>  
+                        <Down src={DownIcon} onClick={showAulas}/>
+                    
+                    </FaseArea>
+                    
                     <Sidebar>
 
                         <AulaItem>Aula 1: Introdução </AulaItem>
@@ -108,11 +126,14 @@ function Aulas() {
                         <AulaItem>Aula 5: Revisão</AulaItem>
 
                     </Sidebar>
-
-                        <GuiaTitle2> Intermediário 
-                            <FaAngleDown/>
-                        </GuiaTitle2>
-                   
+                    
+                    <FaseArea>
+                    
+                        <GuiaTitle onClick={showAulas}> Intermediário </GuiaTitle>
+                        <Down src={DownIcon} onClick={showAulas}/>
+                    
+                    </FaseArea>
+                    
                     <Sidebar>
 
                         <AulaItem>Aula 1: Trabalhando com Condições </AulaItem>

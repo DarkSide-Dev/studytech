@@ -74,19 +74,21 @@ export const AreaCurso= styled.section`
     display: flex;
     padding-top: 70px;
     color: #fff;
+    margin: 0 35px;
 `;
 
 export const AreaVideo = styled.div`
     background-color: #005aa7;
     flex: 1;
-    display: flex;
-    justify-content: center;
-    
+    flex-direction:column ;
+    align-items: center;
+    border: 1px solid #d9d9d9;
 `;
 
 export const VideoTitle = styled.h2`
     font-size: 30px;
     color: #fff;
+    text-align: center;
 `;
 
 export const AreaGuia = styled.div`
@@ -97,29 +99,37 @@ export const GuiaTitle = styled.h2`
     font-size: 25px;
     padding: 15px;
     margin: 0;
-    border-bottom: 2px solid #fff;
     padding-right: 50px;
-    
+    flex: 1;
 `;
 
 export const Sidebar = styled.ul `
-    
+    opacity: ${props => props.opacity};
 `;
 
 export const AulaItem = styled.li `
     margin-bottom: 25px;
 `;
 
-export const GuiaTitle2 = styled.h2`
-    font-size: 25px;
-    padding: 15px;
-    margin: 0;
-    border-bottom: 2px solid #fff;
-    border-top: 2px solid #fff;
-   
+export const Down = styled.img`
+    flex: 0.15;
+    height: 40px;
+    width: 10%;
+    margin: auto;
+    margin-right: 10px;
+    cursor: pointer;
 `;
 
-export const FaAngleDown = styled.a`
+ export const VideoPlayer = styled.video`
 
-`;
+ `;
 
+ export const FaseArea = styled.div`
+    display: flex;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff; 
+ `;
+
+ export const Description = styled.p`
+    margin: 60px 80px 50px 40px;
+ `;
