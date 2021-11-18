@@ -57,7 +57,7 @@ const App = () => {
 
                 </MainItemArea>
 
-                <MainItemArea>
+                <MainItemArea onClick={() => {changeScreen('form')}}>
 
                     <MainItemImg src={FormIcon} />
 
