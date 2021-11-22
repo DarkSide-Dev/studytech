@@ -1,0 +1,12 @@
+.video-js{
+    display: block;
+    margin: auto;
+}
+
+.vs-poster{
+    border-radius: 10px;
+}
+
+.video-js .vjs-big-play-button{
+    background-color: #fff;
+}
