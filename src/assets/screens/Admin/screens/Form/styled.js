@@ -50,7 +50,7 @@ export const  BannerLabel = styled.label`
 `;
 
 export const BannerInput = styled.input`
-    width: 100%;
+    width: 100%;    
     padding: 5px;
     margin-bottom: 40px;
     border-radius: 3px;
@@ -58,6 +58,10 @@ export const BannerInput = styled.input`
     font-size: 20px;
     outline: none;
     display: ${props => props.display};
+
+    @media(max-width: 400px){
+        max-width: 200px !important;
+    }
 `;
 
 export const Submit = styled.button`
@@ -80,7 +84,7 @@ export const PerguntasTable = styled.table`
     margin: 25px 0;
     font-size: 18px;
     font-family: sans-serif;
-    min-width: 400px;
+    width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.18);
     background-color: #99b4f0;
 `;

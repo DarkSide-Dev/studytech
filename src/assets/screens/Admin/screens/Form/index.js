@@ -32,9 +32,15 @@ const Form = () => {
     }
 
     const [modal, setModal] = useState(false);
+    const [modal2, setModal2] = useState(false);
+
+    const [indd, setIndd] = useState(0);
+
     const [img, setImg] = useState('');    
     const [quest, setQuest] = useState(questModel);
+    
     const [interQuest, setInterQuest] = useState('');
+    const [interAlter, setInterAlter] = useState('');
 
     function previewFile(fileinput) {
 
@@ -57,6 +63,8 @@ const Form = () => {
         
         setModal(false);
         setInterQuest('');
+        setModal2(false);
+        setInterAlter('');
 
     }
 
@@ -65,9 +73,30 @@ const Form = () => {
         let intermediate = quest;
 
         intermediate.pergunta.push(interQuest);
-        intermediate.alternativas.push({});
+        intermediate.alternativas.push({target: []});
         setQuest(intermediate);
         onCloseModal();
+    }
+
+    function addAlternative(index){
+
+        let intermediate = quest;        
+
+        intermediate.alternativas.forEach((element, indexx) => {
+
+            if(index == indexx){                
+
+                intermediate.alternativas[index].target.push(interAlter);
+
+            }
+
+        });
+
+        setQuest(intermediate);
+        onCloseModal();
+
+        console.log(quest);
+
     }
 
     function deleteQuestion(index){
@@ -75,6 +104,9 @@ const Form = () => {
         let intermediate = quest;
 
         intermediate.pergunta.splice(index, 1);
+
+        intermediate.alternativas.splice(index, 1);
+
         setQuest({...intermediate});
 
     }
@@ -106,7 +138,7 @@ const Form = () => {
 
                                         <PerguntasTd>{element}</PerguntasTd>
                                         <PerguntasTd>
-                                            <Action src={AddIcon} />
+                                            <Action src={AddIcon} onClick={() => {setModal2(true); setModal(true); setIndd(index)}} />
                                             <Action src={DeleteIcon} onClick={() => deleteQuestion(index)} />
                                         </PerguntasTd>
 
@@ -134,9 +166,47 @@ const Form = () => {
 
             <Modal open={modal} onClose={onCloseModal} center>
                 
-                <BannerLabel>Pergunta</BannerLabel>
-                <BannerInput value={interQuest} onChange={event => setInterQuest(event.target.value)} display="block" type="text" style={{width: 310}} />
-                <Submit onClick={addQuestion}>Adicionar pergunta</Submit>
+                { !modal2 &&
+                    <>
+                        <BannerLabel>Pergunta</BannerLabel>
+                        <BannerInput value={interQuest} onChange={event => setInterQuest(event.target.value)} display="block" type="text" style={{width: 310}} />
+                        <Submit onClick={addQuestion}>Adicionar pergunta</Submit>
+                    </>
+                }
+
+                { modal2 &&
+                    <>
+                        <BannerLabel>Alternativas</BannerLabel>
+                        <ul>
+                        {
+                            quest.alternativas.map((element, index) => {
+
+                                if(element.target.length > 0 && index == indd){
+
+                                   return(
+
+                                        element.target.map((e, i) => {
+
+                                            return(
+                                                <li>
+                                                    {e}
+                                                </li>
+                                            )
+
+                                        })
+
+                                   );
+
+                                }
+                                
+                            })
+
+                        }
+                        </ul>
+                        <BannerInput value={interAlter} onChange={event => setInterAlter(event.target.value)} display="block" type="text" style={{width: 310}} />
+                        <Submit onClick={() => {addAlternative(indd)}}>Adicionar alternativa</Submit>
+                    </>
+                }                
 
             </Modal>
 
