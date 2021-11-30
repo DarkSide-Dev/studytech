@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div `
-    display: flex;
     flex-direction: column;
+    margin: 0;
 `;
 
 export const Header = styled.div `
@@ -17,6 +17,16 @@ export const Title = styled.h1 `
     color: #fff;
     margin: 20px 50px;
     font-size: 30px;
+
+    @media(max-width:445px){
+        font-size: 20px;
+        margin: 20px 35px;
+    }
+
+    @media(max-width:320px){
+        font-size: 20px;
+        margin: 20px;
+    }
 `;
 
 export const NavUserArea = styled.div `
@@ -24,6 +34,15 @@ export const NavUserArea = styled.div `
     align-items: center;
     padding-right: 30px;
     position: relative;
+
+    @media(max-width:445px){
+        padding-right: 15px;
+    }
+
+    @media(max-width:320px){
+        padding-right: 0;
+        width: 45%;
+    }
 `;
 
 export const NavList = styled.ul `
@@ -62,11 +81,23 @@ export const UserImg = styled.img `
     height: 40px;
     cursor: pointer;
     margin: 5px;
+
+    @media(max-width:425px){
+        margin: 2px;
+    }
 `;
 
 export const NavUser = styled.p `
     color: #fff;
     cursor: pointer;
+
+    @media(max-width:425px){
+        font-size: 15px;
+    }
+
+    @media(max-width:320px){
+        font-size: 13px;
+    }
 `;
 
 export const AreaCurso= styled.section`
@@ -75,6 +106,14 @@ export const AreaCurso= styled.section`
     padding-top: 70px;
     color: #fff;
     margin: 0 35px;
+
+    @media(max-width:768px){
+        flex-direction: column;
+    }
+
+    @media(max-width:1024px){
+        margin: 0;
+    }
 `;
 
 export const AreaVideo = styled.div`
@@ -83,6 +122,14 @@ export const AreaVideo = styled.div`
     flex-direction:column ;
     align-items: center;
     border: 1px solid #d9d9d9;
+
+    @media(min-width:769px){
+        width: 60%;
+    }
+    
+    @media(min-width:1024px){
+        width: 60%;
+    }
 `;
 
 export const VideoTitle = styled.h2`
@@ -94,6 +141,10 @@ export const VideoTitle = styled.h2`
 export const AreaGuia = styled.div`
     background-color: #0d378c;
     width: 35%;
+
+    @media(max-width:768px){
+        width: 100%;
+    }
 `;
 export const GuiaTitle = styled.h2`
     font-size: 25px;
@@ -101,6 +152,10 @@ export const GuiaTitle = styled.h2`
     margin: 0;
     padding-right: 50px;
     flex: 1;
+
+    @media(max-width:425px){
+        font-size: 20px;
+    }
 `;
 
 export const Sidebar = styled.ul `
@@ -118,10 +173,15 @@ export const Down = styled.img`
     margin: auto;
     margin-right: 10px;
     cursor: pointer;
+
+    @media(max-width:768px){
+        height: 25px;
+    }
 `;
 
  export const VideoPlayer = styled.video`
-
+    height: 100%;
+    max-width: 100%;
  `;
 
  export const FaseArea = styled.div`
@@ -132,4 +192,8 @@ export const Down = styled.img`
 
  export const Description = styled.p`
     margin: 60px 80px 50px 40px;
+
+    @media(max-width:768px){
+        display: none;
+    }
  `;
