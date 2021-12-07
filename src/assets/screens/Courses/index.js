@@ -4,6 +4,8 @@ import UserIcon from '../../img/user.png';
 import LinkedinIcon from '../../img/174857.png';
 import ExcelIcon from '../../img/excel-logo.png';
 import WhatsIcon from '../../img/whatsapp-business-34.png';
+import Drive from '../../img/drive.png';
+import Trello from '../../img/kisspng-trello-logo-slack-atlassian-trello-5b2bcdc8b0e154.9936644115295973847245.png';
 
 import {
 
@@ -153,17 +155,17 @@ function Courses(){
 
                 </Curso>
 
-                <Curso color="#0554f2">
+                <Curso color="#999">
 
                     <AreaImagem>
                     
-                        <CursoImagem src={LinkedinIcon} />
+                        <CursoImagem src={Drive} />
 
                     </AreaImagem>
 
                     <AreaInfo>
                     
-                        <CursoTitle>Linkedin</CursoTitle>
+                        <CursoTitle>Drive</CursoTitle>
 
                         <div class="progress">
                             <div class="progress-bar bg-warning" role="progressbar" style={{width: '25%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -175,17 +177,17 @@ function Courses(){
 
                 </Curso>
 
-                <Curso color="#107c41">
+                <Curso color="#0554f2">
 
                     <AreaImagem>
                     
-                        <CursoImagem src={ExcelIcon} />
+                        <CursoImagem src={Trello} />
 
                     </AreaImagem>
 
                     <AreaInfo>
                     
-                        <CursoTitle>Excel</CursoTitle>
+                        <CursoTitle>Trello</CursoTitle>
 
                         <div class="progress">
                             <div class="progress-bar bg-warning" role="progressbar" style={{width: '25%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>

@@ -14,6 +14,9 @@ import Banner from './screens/Banner';
 import BannerAdd from './screens/BannerAdd';
 import BannerEdit from './screens/BannerEdit';
 import Form from './screens/Form';
+import Course from './screens/Courses';
+import CourseAdd from './screens/CoursesAdd';
+import CourseAddVideo from './screens/CoursesAddVideo';
 
 const App = () => {
 
@@ -50,6 +53,24 @@ const App = () => {
                 <Route path='/admin/form' exact>
                 
                     <Form />
+
+                </Route>
+
+                <Route path='/admin/courses' exact>
+                
+                    <Course />
+
+                </Route>
+
+                <Route path='/admin/courses/add' exact>
+                
+                    <CourseAdd />
+
+                </Route>
+
+                <Route path='/admin/courses/addvideo' exact>
+                
+                    <CourseAddVideo />
 
                 </Route>
 

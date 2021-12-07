@@ -65,7 +65,7 @@ function Aulas() {
     }
 
     const videoSrc = Player;
-    const poster = "https://th.bing.com/th/id/OIP.rGBWHJSV5MrjC0FyyucVvwHaHa?w=188&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7";
+    const poster = "https://www.impacta.com.br/blog/wp-content/uploads/2021/03/excel_365.png";
 
     return (
 
