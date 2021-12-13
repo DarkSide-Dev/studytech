@@ -41,7 +41,7 @@ const App = () => {
 
             <MainArea>
 
-                <MainItemArea>
+                <MainItemArea onClick={() => {changeScreen('courses')}}>
 
                     <MainItemImg src={CourseIcon} />
 

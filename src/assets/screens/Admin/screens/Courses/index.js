@@ -15,7 +15,8 @@ import {
 
 } from './style';
 
-import Exemplo from '../../../../img/exemplo.jpg';
+import Exemplo from '../../../../img/drive.png';
+import Exemplo2 from '../../../../img/kisspng-trello-logo-slack-atlassian-trello-5b2bcdc8b0e154.9936644115295973847245.png';
 import AddIcon from '../../../../img/add.png';
 
 const Banner = () => {
@@ -40,29 +41,19 @@ const Banner = () => {
 
                 <BannerItem>
 
-                    <BannerTitle>Titulo Curso</BannerTitle>
+                    <BannerTitle>Drive</BannerTitle>
 
                     <BannerImg src={Exemplo} />
 
-                    <BannerBtn>Acessar</BannerBtn>
+                    <BannerBtn onClick={() => {changeScreen('addvideo')}}>Acessar</BannerBtn>
 
                 </BannerItem>
 
                 <BannerItem>
 
-                    <BannerTitle>Titulo Curso</BannerTitle>
+                    <BannerTitle>Trello</BannerTitle>
 
-                    <BannerImg src={Exemplo} />
-
-                    <BannerBtn>Acessar</BannerBtn>
-
-                </BannerItem>
-
-                <BannerItem>
-
-                    <BannerTitle>Titulo Curso</BannerTitle>
-
-                    <BannerImg src={Exemplo} />
+                    <BannerImg src={Exemplo2} />
 
                     <BannerBtn>Acessar</BannerBtn>
 

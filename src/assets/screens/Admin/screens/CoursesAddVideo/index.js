@@ -128,14 +128,14 @@ const CoursesAddVideo = () => {
         <Container>
 
             <Menu>
-                <MenuTitle>Vídeos - Adicionar</MenuTitle>
+                <MenuTitle>Drive</MenuTitle>
             </Menu>
 
             <BannerArea>                
 
                 <BannerForm>                    
 
-                    <BannerLabel>Curso - Vídeos</BannerLabel>
+                    <BannerLabel>Drive - Vídeos</BannerLabel>
                     <PerguntasTable>
 
                         {

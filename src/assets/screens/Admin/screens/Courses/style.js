@@ -45,9 +45,8 @@ export const BannerItem = styled.div`
 `;
 
 export const BannerImg = styled.img`
-    width: 200px;
+    width: 130px;
     max-height: 130px;
-    border: 2px solid #0553f1;
     border-radius: 4px;
 `;
 

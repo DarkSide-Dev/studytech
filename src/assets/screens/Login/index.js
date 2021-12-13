@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import GoogleLogin from 'react-google-login';
-import { useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 
 import {
 
@@ -58,7 +58,7 @@ function Login(){
     const [password2, setPassword2] = useState('');
 
     const [width, setWidth] = useState('50%');
-    const [right, setRight] = useState('0%');
+    const [right, setRight] = useState('50%');
     const [left, setLeft] = useState('100%');
 
     const [show, setShow] = useState(true);
@@ -73,6 +73,12 @@ function Login(){
         }
 
     },[]);
+
+    let history = useHistory();
+
+    function changeScreen(screen){          
+        history.push(`/${screen}`);
+    }
 
     const GetUserFacebook = (response) => {
         console.log(response);
@@ -260,7 +266,7 @@ function Login(){
 
                     <Warning>Esqueceu a senha?</Warning>
 
-                    <LoginButton>Entrar</LoginButton>
+                    <LoginButton onClick={() => changeScreen('courses')}>Entrar</LoginButton>
 
                     <LoginSubtitle>Entre de outra forma</LoginSubtitle>
 

@@ -27,12 +27,19 @@ import {
     NavText
 
 } from './style';
+import { useHistory } from 'react-router';
 
 function Courses(){
 
     const [showConfig, setShowConfig] = useState(false);
     const [opacity, setOpacity] = useState(0);
     const [display, setDisplay] = useState('none');
+
+    let history = useHistory();
+
+    function changeScreen(){          
+        history.push(`/aulas`);
+    }
 
     function showMenu(){
 
@@ -127,7 +134,7 @@ function Courses(){
                             <div class="progress-bar bg-warning" role="progressbar" style={{width: '25%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
 
-                        <CursoBtn >Acessar</CursoBtn>
+                        <CursoBtn onClick={changeScreen}>Acessar</CursoBtn>
                     
                     </AreaInfo>
 

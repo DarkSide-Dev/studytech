@@ -113,6 +113,7 @@ export const LoginButton = styled.button`
     color: #fff;
     font-weight: bold;
     margin-top: 25px;
+    cursor: pointer;
 
     @media(max-width: 785px){
         font-size: 20px;
@@ -139,6 +140,7 @@ export const SocialMedia = styled.img`
     border-radius: 50%;
     margin: 0 5px;
     background-color: ${props => props.fundo?props.fundo:"transparent"};
+    cursor: pointer;
 `;
 
 export const CadastroArea = styled.div`
